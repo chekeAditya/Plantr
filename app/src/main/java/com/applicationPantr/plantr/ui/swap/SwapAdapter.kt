@@ -1,4 +1,4 @@
-package com.applicationPantr.plantr.ui.login.swapper
+package com.applicationPantr.plantr.ui.swap
 
 import android.view.LayoutInflater
 import android.view.View
