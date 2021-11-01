@@ -22,16 +22,25 @@
         android:id="@+id/cvBottom"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        app:cardElevation="10dp">
+        app:cardElevation="6dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottomNavigationView"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="@color/white"
+            app:itemBackground="@drawable/bottom_nav_item_bg_selector"
             app:itemIconTint="@drawable/bottom_nav_selector"
             app:menu="@menu/bottom_nav_menu" />
+
     </androidx.cardview.widget.CardView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="28dp"
+        android:layout_centerHorizontal="true"/>
 
 </RelativeLayout>
 </layout>
