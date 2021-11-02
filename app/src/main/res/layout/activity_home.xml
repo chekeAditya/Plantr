@@ -36,8 +36,11 @@
     </androidx.cardview.widget.CardView>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fbScanPlant"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:src="@drawable/ic_scan"
+        app:maxImageSize="30sp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="28dp"
         android:layout_centerHorizontal="true"/>
