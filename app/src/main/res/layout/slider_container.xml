@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/Heading1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_light"
+        android:textAlignment="center"
+        android:src="@drawable/ic_swap_with_people"
+        android:layout_marginTop="117dp"
+        android:textSize="34sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/Heading2"
+        android:layout_width="match_parent"
+        android:layout_margin="32dp"
+        android:textSize="18sp"
+        android:fontFamily="@font/poppins_light"
+        android:textColor="@color/text_secondary"
+        android:textAlignment="center"
+        android:layout_gravity="center|bottom"
+        android:text="Share or Exchange your plants with \n others and form a Swap community."
+        android:layout_height="wrap_content"/>
+</LinearLayout>
