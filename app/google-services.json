@@ -14,6 +14,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "600765227873-kro6i3appk2t7ftjmgf8o343692jfsoc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.applicationPantr.plantr",
+            "certificate_hash": "9e0d658152bff308d1923cd473f3eba17297f017"
+          }
+        },
+        {
           "client_id": "600765227873-l9ro067hvqc1r9nh6tl1ueucftuacm58.apps.googleusercontent.com",
           "client_type": 3
         }

@@ -31,6 +31,9 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 task wrapper(type: Wrapper){
@@ -44,12 +47,19 @@ dependencies {
     implementation 'com.google.android.material:material:1.4.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     implementation 'com.google.firebase:firebase-auth-ktx:21.0.1'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.5'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.5'
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
-
+    implementation platform('com.google.firebase:firebase-bom:29.0.0')
     //ViewPager 2
     implementation 'androidx.viewpager2:viewpager2:1.0.0'
     //Material design
     implementation 'com.google.android.material:material:1.5.0-alpha05'
+    //facebook
+    implementation 'com.facebook.android:facebook-android-sdk:latest.release'
+    // google
+    implementation 'com.google.android.gms:play-services-auth:19.2.0'
 }
