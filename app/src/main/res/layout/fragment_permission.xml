@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@color/background"
+    android:orientation="vertical"
+    tools:context=".ui.login.permissionFragment">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_permissions_vector" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="Permissions Required"
+        android:textAlignment="center"
+        android:textColor="@color/greyBlack"
+        android:textSize="24sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="12dp"
+        android:fontFamily="@font/poppins_light"
+        android:text="You are required to give access to your \n Location, Camera and Storage for a better \n experience."
+        android:textAlignment="center"
+        android:textColor="@color/greyBlack"
+        android:textSize="16sp" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:src="@drawable/ic_permission_button"
+        android:layout_height="wrap_content"/>
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_marginStart="36dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginTop="22sp"
+        android:src="@drawable/ic_not_now"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

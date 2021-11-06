@@ -81,11 +81,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@color/background"
+                android:background="@color/white"
                 android:gravity="center"
                 android:orientation="vertical">
 
                 <com.google.android.material.tabs.TabLayout
+                    android:background="@color/white"
                     android:id="@+id/tab_login"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -96,6 +97,7 @@
                     app:tabTextColor="#39463B" />
 
                 <androidx.viewpager.widget.ViewPager
+                    android:background="@color/white"
                     android:id="@+id/viewPager"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content" />

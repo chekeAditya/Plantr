@@ -6,7 +6,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/background"
+    android:background="@color/white"
     tools:context=".ui.login.Log_In">
 
     <EditText
@@ -30,7 +30,7 @@
         app:hintTextColor="@color/Green"
         android:textColorHint="@color/Green"
         android:layout_marginTop="10dp"
-        app:boxBackgroundColor="@color/background" >
+        app:boxBackgroundColor="@color/white" >
         <com.google.android.material.textfield.TextInputEditText
             android:hint="password"
             android:layout_marginEnd="24dp"

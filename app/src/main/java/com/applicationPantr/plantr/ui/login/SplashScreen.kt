@@ -11,7 +11,7 @@ import com.applicationPantr.plantr.ui.onBoardingScreen.OnBoarding
 class SplashScreen : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_splash_screen)
+        setContentView(R.layout.fragment_permission)
         Handler().postDelayed(Runnable { //This method will be executed once the timer is over
             // Start your app main activity
             val i = Intent(this, OnBoarding::class.java)

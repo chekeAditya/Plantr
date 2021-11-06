@@ -80,7 +80,10 @@ class OnBoarding : AppCompatActivity() {
             startActivity(it)
             finish()
         }}
-
+        btnGetStarted.setOnClickListener {   Intent(applicationContext,LoginActivity::class.java).also {
+            startActivity(it)
+            finish()
+        }}
     }
 
     private fun setUpIndicator() {
