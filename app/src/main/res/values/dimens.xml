@@ -47,4 +47,5 @@
     <dimen name="dp_54">54dp</dimen>
     <dimen name="dp_11">11dp</dimen>
     <dimen name="dp_19">19dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
 </resources>
