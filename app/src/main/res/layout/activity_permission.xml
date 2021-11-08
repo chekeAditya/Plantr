@@ -1,12 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
     android:background="@color/background"
     android:orientation="vertical"
-    tools:context=".ui.login.permissionFragment">
+    tools:context=".ui.login.Permission">
 
     <ImageView
         android:layout_width="match_parent"
@@ -33,10 +34,12 @@
         android:textColor="@color/greyBlack"
         android:textSize="16sp" />
     <ImageView
+        android:id="@+id/ivPermission"
         android:layout_width="match_parent"
         android:src="@drawable/ic_permission_button"
         android:layout_height="wrap_content"/>
     <ImageView
+        android:id="@+id/ivNotNow"
         android:layout_width="match_parent"
         android:layout_marginStart="36dp"
         android:layout_marginEnd="36dp"

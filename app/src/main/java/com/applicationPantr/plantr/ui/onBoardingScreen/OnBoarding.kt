@@ -22,17 +22,17 @@ class OnBoarding : AppCompatActivity() {
         listOf(
             IntroSlider
                 (
-                R.drawable.ic_swap_with_people,
+                R.drawable.ic_swap_with_people,R.drawable.ic_swap,
                 "Share or Exchange your plants with \n others and form a Swap community."
             ),
             IntroSlider
                 (
-                R.drawable.ic_scan_your_plants,
+                R.drawable.ic_scan_your_plants,R.drawable.ic_scan,
                 "Scan your Plants with Plant Scanner \n and know all the details about it"
             ),
             IntroSlider
                 (
-                R.drawable.ic_chat_with_experts,
+                R.drawable.ic_chat_with_experts,R.drawable.ic_chat,
                 "Scan your Plants with Plant Scanner \n and know all the details about it"
             ),
         )
