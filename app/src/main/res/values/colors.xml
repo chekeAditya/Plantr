@@ -11,6 +11,10 @@
 
     <color name="isSelected">#008080</color>
     <color name="isNotSelected">#97CBCB</color>
+    <color name="BNWBlack">#39463B</color>
+    <color name="primary_2">#EBF5F5</color>
+    <color name="primary_green">#008080</color>
+    <color name="BNWDarkGrey">#909791</color>
 
 
 </resources>

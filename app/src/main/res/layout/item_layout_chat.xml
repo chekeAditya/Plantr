@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+        <variable
+            name="chatReponse"
+            type="com.applicationPantr.plantr.remote.response.ChatResponse" />
+
+        <variable
+            name="onClickedChat"
+            type="com.applicationPantr.plantr.interfaces.OnChatClicked" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/dp_8"
+        app:cardElevation="@dimen/dp_5">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_10"
+                app:cardCornerRadius="100dp">
+
+                <ImageView
+                    android:id="@+id/expert_image"
+                    android:layout_width="@dimen/dp_54"
+                    android:layout_height="@dimen/dp_54"
+                    android:src="@drawable/ic_launcher_background" />
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/expert_Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cvImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_11"
+                android:src="@drawable/ic_rating" />
+
+            <TextView
+                android:id="@+id/expert_Name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expert_Rating"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_11"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Kirti Mishra"
+                android:textColor="@color/BNWBlack" />
+
+            <TextView
+                android:id="@+id/expert_charges"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expert_Name"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_8"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Avg: 120rs/min"
+                android:textColor="@color/BNWDarkGrey" />
+
+            <Button
+                android:id="@+id/btn_chat"
+                android:layout_width="match_parent"
+                android:layout_height="36dp"
+                android:layout_below="@+id/expert_charges"
+                android:layout_marginStart="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_19"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:background="@drawable/rectangulate_button"
+                android:onClick="@{() ->onClickedChat.onClicked(chatReponse)}"
+                android:text="CHAT"
+                android:textColor="@color/primary_green" />
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>
