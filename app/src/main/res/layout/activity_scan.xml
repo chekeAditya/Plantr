@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/main_light_green"
     tools:context=".ui.scan.ScanActivity">
 
     <androidx.camera.view.PreviewView
@@ -13,12 +14,29 @@
         android:background="@color/main_light_green"/>
 
     <ImageView
+        android:id="@+id/ivScanPlant"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <ImageView
+        android:id="@+id/ivIcScanArea"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
         android:layout_marginHorizontal="20dp"
         android:layout_marginTop="250dp"
         android:src="@drawable/ic_scan_area"/>
+
+    <TextView
+        android:id="@+id/tvScanPlantName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/main_dark_green"
+        android:layout_alignStart="@+id/ivIcScanArea"
+        android:layout_alignTop="@+id/ivIcScanArea"
+        android:layout_margin="50dp"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fbCapturePlant"

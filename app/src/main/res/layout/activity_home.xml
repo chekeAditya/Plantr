@@ -29,6 +29,7 @@
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:background="@color/white"
+            app:labelVisibilityMode="unlabeled"
             app:itemBackground="@drawable/bottom_nav_item_bg_selector"
             app:itemIconTint="@drawable/bottom_nav_selector"
             app:menu="@menu/bottom_nav_menu" />
@@ -41,6 +42,8 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_scan"
         app:maxImageSize="30sp"
+        app:borderWidth="0dp"
+        app:elevation="7dp"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="28dp"
         android:layout_centerHorizontal="true"/>
