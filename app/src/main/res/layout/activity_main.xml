@@ -68,6 +68,7 @@
         android:gravity="center">
 
         <androidx.cardview.widget.CardView
+            app:cardElevation="5dp"
             android:layout_width="379dp"
             android:layout_height="408dp"
             android:layout_marginStart="20dp"
