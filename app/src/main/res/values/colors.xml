@@ -26,4 +26,8 @@
     <color name="IndicatorInactive">#EBF5F5</color>
     <color name="IndicatorActive">#97CBCB</color>
     <color name="greyBlack">#39463B</color>
+    <color name="main_light_green">#EBF5F5</color>
+    <color name="main_dark_green">#008080</color>
+    <color name="main_orange">#FF9947</color>
+    <color name="main_head_text_green">#39463B</color>
 </resources>

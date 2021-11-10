@@ -2,7 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.applicationPantr.plantr">
 
-    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-feature android:name="android.hardware.camera.any"/>
 
     <application
         android:allowBackup="true"
@@ -27,9 +28,13 @@
 
         </activity>
 
+        <activity android:name=".ui.scan.ScanActivity"/>
         <activity
             android:name=".ui.home.HomeActivity"
             android:exported="true" >
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
         </activity>
 
@@ -49,6 +54,7 @@
         <meta-data
             android:name="com.facebook.sdk.ApplicationId"
             android:value="@string/facebook_app_id" />
+            android:exported="true"></activity>
     </application>
 
 </manifest>
