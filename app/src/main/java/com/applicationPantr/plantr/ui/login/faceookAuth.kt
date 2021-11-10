@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.applicationPantr.plantr.ui.home.HomeActivity
 import com.facebook.AccessToken
 import com.facebook.FacebookException
 
@@ -69,7 +70,7 @@ class faceookAuth : LoginActivity() {
                     // Sign in success, update UI with the signed-in user's information
                     val user = auth.currentUser
                     updateUI(user)
-                    val notificationIntentGoogle = Intent(this, ready::class.java)
+                    val notificationIntentGoogle = Intent(this, HomeActivity::class.java)
                     startActivity(notificationIntentGoogle)
                 } else {
                     // If sign in fails, display a message to the user.
@@ -82,7 +83,7 @@ class faceookAuth : LoginActivity() {
     }
 
     private fun updateUI(user: FirebaseUser?) {
-        val notificationIntent = Intent(this, ready::class.java)
+        val notificationIntent = Intent(this, HomeActivity::class.java)
         startActivity(notificationIntent)
     }
 }

@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.navigation.NavController
 import com.applicationPantr.plantr.R
+import com.applicationPantr.plantr.ui.home.HomeActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_log_in.*
 import kotlinx.android.synthetic.main.fragment_sign_in.*
@@ -28,10 +29,9 @@ class Sign_In : Fragment(R.layout.fragment_sign_in) {
         }
     }
 
-    //
     private fun skipActionSignUp() {
         tvSignupSkip.setOnClickListener {
-            val notificationIntent = Intent(activity, ready::class.java)
+            val notificationIntent = Intent(activity, HomeActivity::class.java)
             startActivity(notificationIntent)
         }
 
@@ -64,7 +64,7 @@ class Sign_In : Fragment(R.layout.fragment_sign_in) {
                             "Registration successful!" + mAuth.currentUser!!.displayName,
                             Toast.LENGTH_LONG
                         ).show()
-                        val notificationIntent = Intent(context, ready::class.java)
+                        val notificationIntent = Intent(context, HomeActivity::class.java)
                         startActivity(notificationIntent)
 
                     } else {
