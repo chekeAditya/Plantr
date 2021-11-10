@@ -51,4 +51,11 @@
     <dimen name="dp_15">15dp</dimen>
     <dimen name="dp_23">23dp</dimen>
     <dimen name="dp_38">38dp</dimen>
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="dp_36">36dp</dimen>
+    <dimen name="sp_52">52dp</dimen>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_29">29dp</dimen>
+    <dimen name="dp_46">46dp</dimen>
 </resources>

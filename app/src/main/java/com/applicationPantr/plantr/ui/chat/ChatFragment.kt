@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.applicationPantr.plantr.R
 import com.applicationPantr.plantr.adapters.ChatAdapter
@@ -67,7 +68,7 @@ class ChatFragment : Fragment(R.layout.fragment_chat), OnChatClicked, View.OnCli
     override fun onClick(v: View) {
         when (v.id) {
             R.id.iv_filter -> {
-                Toast.makeText(context, "filter clicked", Toast.LENGTH_SHORT).show()
+                Navigation.findNavController(requireView()).navigate(R.id.action_chatFragment_to_filterFragment)
             }
             R.id.iv_sort -> {
                 openSortBottomSheet()

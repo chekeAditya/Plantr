@@ -2,8 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.applicationPantr.plantr">
 
-    <uses-permission android:name="android.permission.CAMERA"/>
-    <uses-feature android:name="android.hardware.camera.any"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-feature android:name="android.hardware.camera.any" />
 
     <application
         android:allowBackup="true"
@@ -31,8 +31,7 @@
 
         </activity>
         <activity android:name=".ui.scan.ScanActivity" />
-        <activity android:name=".ui.scan.PlantDetailsActivity"></activity>
-        <activity android:name=".ui.scan.ScanActivity" />
+        <activity android:name=".ui.scan.PlantDetailsActivity" />
         <activity
             android:name=".ui.home.HomeActivity"
             android:exported="true">
@@ -44,8 +43,7 @@
         </activity>
         <activity
             android:name=".ui.login.LoginActivity"
-            android:exported="true">
-        </activity>
+            android:exported="true"/>
 
         <meta-data
             android:name="preloaded_fonts"

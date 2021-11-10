@@ -47,4 +47,36 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="colorOnBackground">@color/secondary_3</item>
     </style>
+
+    <style name="TextView_Filter">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/BNWBlack</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="cardViewFilter">
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">@dimen/dp_10</item>
+        <item name="android:layout_marginStart">@dimen/dp_22</item>
+        <item name="android:layout_width">@dimen/dp_48</item>
+        <item name="android:layout_height">@dimen/dp_48</item>
+    </style>
+
+    <style name="rlTextStar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/BNWBlack</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="starInCard">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
 </resources>

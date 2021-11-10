@@ -17,8 +17,8 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvPlant"
-            android:layout_width="155sp"
-            android:layout_height="140sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             app:cardCornerRadius="8dp">
 
             <ImageView
