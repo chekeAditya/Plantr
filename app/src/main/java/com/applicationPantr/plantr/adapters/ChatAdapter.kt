@@ -8,6 +8,7 @@ import com.applicationPantr.plantr.R
 import com.applicationPantr.plantr.databinding.ItemLayoutChatBinding
 import com.applicationPantr.plantr.interfaces.OnChatClicked
 import com.applicationPantr.plantr.remote.response.ChatResponse
+import com.bumptech.glide.Glide
 
 class ChatAdapter(
     private val charResponseList: List<ChatResponse>,
@@ -16,11 +17,11 @@ class ChatAdapter(
 
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {
-       val itemLayoutChatBinding:ItemLayoutChatBinding = DataBindingUtil.inflate(
-           LayoutInflater.from(parent.context),
-           R.layout.item_layout_chat,parent,false
-       )
-        return ChatViewHolder(itemLayoutChatBinding,onChatClicked)
+        val itemLayoutChatBinding: ItemLayoutChatBinding = DataBindingUtil.inflate(
+            LayoutInflater.from(parent.context),
+            R.layout.item_layout_chat, parent, false
+        )
+        return ChatViewHolder(itemLayoutChatBinding, onChatClicked)
     }
 
     override fun onBindViewHolder(holder: ChatViewHolder, position: Int) {
@@ -41,5 +42,7 @@ class ChatViewHolder(
     fun onBind(chatResponse: ChatResponse) {
         itemLayoutChatBinding.onClickedChat = onChatClicked
         itemLayoutChatBinding.chatReponse = chatResponse
+        Glide.with(itemLayoutChatBinding.cvImage).load(chatResponse.image)
+            .into(itemLayoutChatBinding.expertImage)
     }
 }

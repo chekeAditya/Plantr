@@ -48,4 +48,7 @@
     <dimen name="dp_11">11dp</dimen>
     <dimen name="dp_19">19dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="dp_15">15dp</dimen>
+    <dimen name="dp_23">23dp</dimen>
+    <dimen name="dp_38">38dp</dimen>
 </resources>
