@@ -1,5 +1,6 @@
 package com.applicationPantr.plantr.ui.scan
 
+import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -13,6 +14,10 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.applicationPantr.plantr.R
 import com.applicationPantr.plantr.databinding.ActivityScanBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import java.io.File
 import java.lang.Exception
 import java.text.SimpleDateFormat
@@ -107,12 +112,22 @@ class ScanActivity : AppCompatActivity() {
                         }
                         tvScanPlantName.text = "Plant Name"
                     }
+                    showPlantDetails(savedUri)
                 }
 
                 override fun onError(exception: ImageCaptureException) {
                 }
 
             })
+    }
+
+    fun showPlantDetails(plantImageUri: Uri){
+        activityScanBinding.ivScanPlant.setOnClickListener {
+            val intent = Intent(this@ScanActivity,
+                PlantDetailsActivity::class.java)
+            intent.putExtra("uri",plantImageUri.toString())
+            startActivity(intent)
+        }
     }
 
     override fun onDestroy() {
