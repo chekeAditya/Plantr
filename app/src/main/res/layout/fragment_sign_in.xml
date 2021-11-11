@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/background"
+    android:background="@color/white"
     tools:context=".ui.login.Log_In">
     <EditText
         android:id="@+id/etNameSignIn"

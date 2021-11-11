@@ -21,9 +21,10 @@
 
 
 
+
     //Plantr colors
     <color name="Green"> #008080</color>
-    <color name="background">#FFFFFF</color>
+    <color name="background">#E5E5E5</color>
     <color name="text_primary">#39463B</color>
     <color name="text_secondary">#707A72</color>
     <color name="IndicatorInactive">#EBF5F5</color>
