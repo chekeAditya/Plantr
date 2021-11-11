@@ -32,6 +32,7 @@
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/gifScanBar"
         android:visibility="gone"
+        android:src="@drawable/scan_bar"
         android:layout_alignStart="@+id/ivIcScanArea"
         android:layout_alignEnd="@+id/ivIcScanArea"
         android:layout_width="wrap_content"

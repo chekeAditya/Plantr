@@ -117,7 +117,7 @@ class ScanActivity : AppCompatActivity() {
             gifScanBar.visibility = View.VISIBLE
 
             CoroutineScope(Dispatchers.Main).launch {
-                delay(4000)
+                delay(8000)
                 cameraProvider.unbindAll()
                 viewFinder.visibility = View.GONE
                 gifScanBar.visibility = View.GONE
