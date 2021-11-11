@@ -27,11 +27,11 @@
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="match_parent"
-            android:layout_height="350dp"
+            android:layout_height="400dp"
             android:layout_alignParentBottom="true"
             android:layout_marginHorizontal="15dp"
             android:layout_marginBottom="-10dp"
-            android:elevation="5dp"
+            android:elevation="10dp"
             app:cardCornerRadius="16dp">
 
             <LinearLayout
@@ -48,6 +48,14 @@
                     android:text="Plant Name"
                     android:textColor="@color/main_head_text_green"
                     android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvDetailsPlantSFName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:text="Name"
+                    android:textSize="17sp" />
 
                 <TextView
                     android:id="@+id/tvPlantDetails"
