@@ -103,22 +103,33 @@ class ScanActivity : AppCompatActivity() {
             ContextCompat.getMainExecutor(this), object : ImageCapture.OnImageSavedCallback {
                 override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
                     val savedUri = Uri.fromFile(photoFile)
-                    activityScanBinding.apply {
-                        cameraProvider.unbindAll()
-                        viewFinder.visibility = View.GONE
-                        ivScanPlant.apply {
-                            setImageURI(savedUri)
-                            visibility = View.VISIBLE
-                        }
-                        tvScanPlantName.text = "Plant Name"
-                    }
-                    showPlantDetails(savedUri)
+                    startPlantScanning(savedUri)
                 }
 
                 override fun onError(exception: ImageCaptureException) {
                 }
 
             })
+    }
+
+    private fun startPlantScanning(savedUri: Uri) {
+        activityScanBinding.apply {
+            gifScanBar.visibility = View.VISIBLE
+
+            CoroutineScope(Dispatchers.Main).launch {
+                delay(4000)
+                cameraProvider.unbindAll()
+                viewFinder.visibility = View.GONE
+                gifScanBar.visibility = View.GONE
+                ivScanPlant.apply {
+                    setImageURI(savedUri)
+                    visibility = View.VISIBLE
+                }
+                tvScanPlantName.text = "Plant Name"
+            }
+
+        }
+        showPlantDetails(savedUri)
     }
 
     fun showPlantDetails(plantImageUri: Uri){

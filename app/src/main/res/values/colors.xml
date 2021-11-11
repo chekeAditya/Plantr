@@ -35,4 +35,5 @@
     <color name="main_head_text_green">#39463B</color>
     <color name="main_dark_green_bg">#97CBCB</color>
     <color name="main_orange_bg">#FFC495</color>
+    <color name="main_text_light">#909791</color>
 </resources>

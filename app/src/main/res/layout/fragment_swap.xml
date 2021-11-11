@@ -15,6 +15,7 @@
             android:layout_marginStart="10dp"
             android:layout_marginTop="20dp"
             android:text="Find your Swapsters"
+            android:fontFamily="@font/poppins"
             android:textColor="@color/main_head_text_green"
             android:textSize="24sp" />
 
