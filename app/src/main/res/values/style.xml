@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="TopHeading">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/BNWBlack</item>
+        <item name="android:textSize">@dimen/sp_24</item>
+
+    </style>
+
+    <style name="BothSideMargin">
+        <item name="android:layout_marginStart">@dimen/dp_20</item>
+        <item name="android:layout_marginEnd">@dimen/dp_20</item>
+    </style>
+
+    <style name="ImageViewChatFragment">
+       <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+
+    <style name="TextViewBottonSheet">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_marginStart">@dimen/sp_16</item>
+        <item name="android:layout_marginTop">@dimen/dp_23</item>
+        <item name="android:textColor">@color/text_secondary</item>
+    </style>
+
+    <style name="ResetButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@drawable/is_selected_resetbutton</item>
+    </style>
+
+    <style name="ApplyButton">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="radioButton">
+        <item name="android:layout_marginTop">@dimen/dp_15</item>
+        <item name="android:layout_alignParentEnd">true</item>
+        <item name="android:layout_marginEnd">@dimen/sp_16</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="colorOnBackground">@color/secondary_3</item>
+    </style>
+
+    <style name="TextView_Filter">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/BNWBlack</item>
+        <item name="android:textSize">@dimen/sp_14</item>
+        <item name="android:fontFamily">@font/poppins</item>
+    </style>
+
+    <style name="cardViewFilter">
+        <item name="android:layout_weight">1</item>
+        <item name="android:padding">@dimen/dp_10</item>
+        <item name="android:layout_marginStart">@dimen/dp_22</item>
+        <item name="android:layout_width">@dimen/dp_48</item>
+        <item name="android:layout_height">@dimen/dp_48</item>
+    </style>
+
+    <style name="rlTextStar">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/BNWBlack</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+        <item name="android:layout_centerInParent">true</item>
+    </style>
+
+    <style name="starInCard">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6dp</item>
+        <item name="android:layout_marginEnd">4dp</item>
+        <item name="android:layout_alignParentEnd">true</item>
+    </style>
+</resources>

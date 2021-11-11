@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.chat.FilterFragment">
+
+
+        <RelativeLayout
+            android:id="@+id/rlChatFragment"
+            style="@style/BothSideMargin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvFilter"
+                style="@style/TopHeading"
+                android:layout_marginTop="@dimen/dp_18"
+                android:drawablePadding="@dimen/dp_22"
+                android:fontFamily="@font/poppins"
+                android:text="Filter"
+                android:textSize="@dimen/sp_24"
+                app:drawableStartCompat="@drawable/ic_scan_back" />
+
+            <ImageView
+                android:id="@+id/iv_filter"
+                style="@style/ImageViewChatFragment"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginEnd="@dimen/dp_19"
+                android:src="@drawable/ic_filter" />
+
+            <TextView
+                android:id="@+id/tvPriceRange"
+                style="@style/TextView_Filter"
+                android:layout_below="@+id/tvFilter"
+                android:layout_marginTop="@dimen/dp_24"
+                android:text="Price Range" />
+
+            <com.mohammedalaa.seekbar.DoubleValueSeekBarView
+                android:layout_below="@+id/tvPriceRange"
+                android:id="@+id/double_range_seekbar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:r2CurrentMaxValue="140"
+                app:r2CurrentMinValue="30"
+                app:r2barHeight="15dp"
+                app:r2baseColor="@color/navy"
+                app:r2circleFillColor="@color/green"
+                app:r2circleRadius="15dp"
+                app:r2circleTextColor="@color/white"
+                app:r2circleTextSize="@dimen/value_bar_circleTextSize"
+                app:r2fillColor="@color/red"
+                app:r2maxValue="150"
+                app:r2maxValueStep="10"
+                app:r2minValue="15"
+                app:r2minValueStep="5" />
+
+
+            <TextView
+                android:id="@+id/tvRange"
+                style="@style/TextView_Filter"
+                android:layout_below="@+id/double_range_seekbar"
+                android:layout_marginTop="@dimen/sp_52"
+                android:text="Rating" />
+
+            <LinearLayout
+                android:id="@+id/llRatings"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:layout_below="@id/tvRange"
+                android:layout_marginTop="@dimen/dp_29">
+
+                <androidx.cardview.widget.CardView
+                    style="@style/cardViewFilter"
+                    android:layout_marginStart="0dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            style="@style/rlTextStar"
+                            android:text="1" />
+
+                        <ImageView
+                            style="@style/starInCard"
+                            android:src="@drawable/ic_start_filter" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView style="@style/cardViewFilter">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            style="@style/rlTextStar"
+                            android:text="2" />
+
+                        <ImageView
+                            style="@style/starInCard"
+                            android:src="@drawable/ic_start_filter" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView style="@style/cardViewFilter">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            style="@style/rlTextStar"
+                            android:text="3" />
+
+                        <ImageView
+                            style="@style/starInCard"
+                            android:src="@drawable/ic_start_filter" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView style="@style/cardViewFilter">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            style="@style/rlTextStar"
+                            android:text="4" />
+
+                        <ImageView
+                            style="@style/starInCard"
+                            android:src="@drawable/ic_start_filter" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView style="@style/cardViewFilter">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            style="@style/rlTextStar"
+                            android:text="5" />
+
+                        <ImageView
+                            style="@style/starInCard"
+                            android:src="@drawable/ic_start_filter" />
+
+                    </RelativeLayout>
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvLanguage"
+                style="@style/TextView_Filter"
+                android:layout_below="@+id/llRatings"
+                android:layout_marginTop="@dimen/sp_52"
+                android:text="Language" />
+
+            <Spinner
+                android:id="@+id/Spinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/llRatings"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/sp_52"
+                android:background="@drawable/reactangle_spinner"
+                android:elevation="1dp"
+                android:entries="@array/filter_options"
+                android:padding="@dimen/dp_10" />
+
+            <TextView
+                android:id="@+id/tvPlanterAssured"
+                style="@style/TextView_Filter"
+                android:layout_below="@+id/Spinner"
+                android:layout_marginTop="@dimen/dp_46"
+                android:text="Plantr Assured" />
+
+            <TextView
+                android:id="@+id/tvVerified"
+                style="@style/TextView_Filter"
+                android:layout_below="@+id/tvPlanterAssured"
+                android:layout_marginTop="@dimen/dp_46"
+                android:text="Verified" />
+
+            <TextView
+                android:id="@+id/tvOffers"
+                style="@style/TextView_Filter"
+                android:layout_below="@+id/tvVerified"
+                android:layout_marginTop="@dimen/dp_46"
+                android:text="Offers" />
+
+            <LinearLayout
+                android:layout_below="@+id/switchOthers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_38"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:paddingBottom="@dimen/dp_28">
+
+                <Button
+                    android:id="@+id/tvReset"
+                    style="@style/ResetButton"
+                    android:layout_weight="1.5"
+                    android:background="@android:color/transparent"
+                    android:text="RESET"
+                    android:textSize="@dimen/sp_16" />
+
+                <Button
+                    android:id="@+id/tvApply"
+                    style="@style/ApplyButton"
+                    android:layout_weight="1"
+                    android:background="@drawable/is_selected_applybutton"
+                    android:text="APPLY"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/sp_16" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchPlantrAssured"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/Spinner"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_36"
+                android:padding="@dimen/dp_10"
+                android:thumb="@drawable/thumb"
+                app:showText="false"
+                app:track="@drawable/track" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchVerified"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPlanterAssured"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_36"
+                android:padding="@dimen/dp_10"
+                android:thumb="@drawable/thumb"
+                app:showText="false"
+                app:track="@drawable/track" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchOthers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/switchVerified"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_36"
+                android:padding="@dimen/dp_10"
+                android:thumb="@drawable/thumb"
+                app:showText="false"
+                app:track="@drawable/track" />
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+</layout>

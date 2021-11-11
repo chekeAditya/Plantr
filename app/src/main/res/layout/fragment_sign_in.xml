@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".ui.login.Log_In">
+    <EditText
+        android:id="@+id/etNameSignIn"
+        android:fontFamily="@font/poppins"
+        android:textSize="16sp"
+        android:textColor="#39463B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="emailAddress"
+        android:hint="Name"
+        android:inputType="textEmailAddress|textWebEmailAddress" />
+    <EditText
+        android:id="@+id/etEmailSignIn"
+        android:fontFamily="@font/poppins"
+        android:textSize="16sp"
+        android:textColor="#39463B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="24dp"
+        android:autofillHints="emailAddress"
+        android:hint="Email Address"
+        android:layout_marginEnd="20dp"
+        android:inputType="textEmailAddress|textWebEmailAddress" />
+
+    <EditText
+        android:id="@+id/etPasswordSignIn"
+        android:fontFamily="@font/poppins"
+        android:drawableEnd="@drawable/ic_visible"
+        android:padding="10dp"
+        android:textSize="16sp"
+        android:textColor="#39463B"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:autofillHints="password"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <ImageView
+        android:id="@+id/ivSignIn"
+        android:layout_marginTop="28dp"
+        android:layout_width="wrap_content"
+        android:src="@drawable/ic_signup"
+        android:layout_height="wrap_content"
+        android:contentDescription="signUp" />
+    <TextView
+        android:id="@+id/tvSignupSkip"
+        android:textSize="16sp"
+        android:layout_marginTop="18dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:fontFamily="@font/poppins"
+        android:text="SKip this for now"
+        android:textColor="#FF9947"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

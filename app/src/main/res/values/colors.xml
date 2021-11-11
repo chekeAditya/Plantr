@@ -11,8 +11,24 @@
 
     <color name="isSelected">#008080</color>
     <color name="isNotSelected">#97CBCB</color>
+    <color name="BNWBlack">#39463B</color>
+    <color name="primary_2">#EBF5F5</color>
+    <color name="primary_green">#008080</color>
+    <color name="orange">#FF9947</color>
+    <color name="neutral_1">#FEE1C3</color>
+    <color name="BNWDarkGrey">#909791</color>
+    <color name="secondary_3">#43AB65</color>
 
 
+
+    //Plantr colors
+    <color name="Green"> #008080</color>
+    <color name="background">#FFFFFF</color>
+    <color name="text_primary">#39463B</color>
+    <color name="text_secondary">#707A72</color>
+    <color name="IndicatorInactive">#EBF5F5</color>
+    <color name="IndicatorActive">#97CBCB</color>
+    <color name="greyBlack">#39463B</color>
     <color name="main_light_green">#EBF5F5</color>
     <color name="main_dark_green">#008080</color>
     <color name="main_orange">#FF9947</color>

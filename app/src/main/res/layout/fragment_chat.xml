@@ -1,14 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.chat.ChatFragment">
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <data>
+        <variable
+            name="onSortButtonClicked"
+            type="com.applicationPantr.plantr.interfaces.OnChatClicked" />
+    </data>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="Chat fragment" />
+        android:background="#DBDEDC"
+        tools:context=".ui.chat.ChatFragment">
 
-</FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlChatFragment"
+            style="@style/BothSideMargin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvTalkWithExpert"
+                style="@style/TopHeading"
+                android:layout_marginTop="@dimen/dp_18"
+                android:fontFamily="@font/poppins_medium"
+                android:text="Talk with Expert" />
+
+            <ImageView
+                android:id="@+id/iv_filter"
+                style="@style/ImageViewChatFragment"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/dp_18"
+                android:src="@drawable/ic_filter" />
+
+            <ImageView
+                android:id="@+id/iv_sort"
+                style="@style/ImageViewChatFragment"
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginEnd="@dimen/dp_33"
+                android:layout_toStartOf="@+id/iv_filter"
+                android:src="@drawable/ic_sort" />
+
+            <ImageView
+                android:id="@+id/iv_search"
+                style="@style/ImageViewChatFragment"
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginEnd="@dimen/dp_33"
+                android:layout_toStartOf="@+id/iv_sort"
+                android:src="@drawable/ic_search" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/chatRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/rlChatFragment"
+            android:layout_marginTop="@dimen/dp_20" />
+
+
+    </RelativeLayout>
+</layout>

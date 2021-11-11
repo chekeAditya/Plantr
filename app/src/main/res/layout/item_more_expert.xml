@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="@dimen/dp_16"
+    app:cardElevation="@dimen/dp_10"
+    android:layout_marginStart="@dimen/dp_16"
+    android:layout_marginTop="@dimen/dp_24"
+    android:layout_marginEnd="@dimen/dp_16"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ciExpertImage"
+            android:layout_width="@dimen/dp_64"
+            android:layout_height="@dimen/dp_64"
+            android:layout_margin="@dimen/dp_16"
+            android:src="@color/secondary_3" />
+
+        <TextView
+            android:id="@+id/tvExpertName"
+            style="@style/TextView_Filter"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_toEndOf="@+id/ciExpertImage"
+            android:text="Anushka Sahore"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvExpertType"
+            style="@style/TextView_Filter"
+            android:layout_below="@+id/tvExpertName"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_2"
+            android:layout_toEndOf="@+id/ciExpertImage"
+            android:text="Succulent Expert"
+            android:textSize="@dimen/sp_12"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:layout_alignParentEnd="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/dp_22"
+            android:src="@drawable/ic_right_side_arrow"/>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
