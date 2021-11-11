@@ -92,4 +92,7 @@ dependencies {
 
     //range seekbar
     implementation 'com.github.MohammedAlaaMorsi:RangeSeekBar:1.0.6'
+
+    //circularImage
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

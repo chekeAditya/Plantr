@@ -16,5 +16,7 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="about_me_desc">Hello Plants people!!! I am a Professional Online Plant Expert in the field of Succulents and Exotic Plants. I have experience of more than 9 years. Talking about my education, I am a graduate from sdfjnsadnflskdfx</string>
+    <string name="client_desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Molestie et gravida aliquam consectetur enim. Blandit volutpat vestibulum aliquet urna laoreet.</string>
 
 </resources>

@@ -29,6 +29,7 @@
                 android:layout_marginTop="@dimen/dp_22"
                 android:fontFamily="@font/poppins"
                 android:text="Sort"
+                android:textStyle="bold"
                 android:textColor="@color/BNWBlack"
                 android:textSize="@dimen/sp_22" />
 
