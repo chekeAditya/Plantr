@@ -12,13 +12,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@color/white"
-        android:padding="5dp"
-        android:orientation="vertical">
+        android:padding="5dp">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvPlant"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="140sp"
             app:cardCornerRadius="8dp">
 
             <ImageView
@@ -32,9 +31,12 @@
 
         <TextView
             android:id="@+id/tvPlantA"
-            android:layout_width="155sp"
+            android:layout_width="0sp"
             android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/cvPlant"
+            android:layout_alignEnd="@+id/cvPlant"
             android:text="Plant A"
+            android:fontFamily="@font/poppins"
             android:gravity="center"
             android:textColor="@color/main_dark_green"
             android:textSize="13sp"
@@ -52,9 +54,12 @@
 
         <TextView
             android:id="@+id/tvPlantB"
-            android:layout_width="155sp"
+            android:layout_width="0sp"
             android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/cvPlant"
+            android:layout_alignEnd="@+id/cvPlant"
             android:text="Plant B"
+            android:fontFamily="@font/poppins"
             android:gravity="center"
             android:textColor="@color/main_orange"
             android:textSize="13sp"
