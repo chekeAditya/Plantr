@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.NavDirections
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.GridLayoutManager
 import com.applicationPantr.plantr.R
@@ -23,6 +24,7 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class ChatFragment : Fragment(), OnChatClicked {
 
+    lateinit var  action: NavDirections
     private lateinit var bottomSheetBinding: BottomSheetChatFargmentBinding
     lateinit var chatAdapter: ChatAdapter
     var expertList = mutableListOf<Expert>()
@@ -50,10 +52,12 @@ class ChatFragment : Fragment(), OnChatClicked {
             chatAdapter.notifyDataSetChanged()
         })
 
-        charFragmentChatBinding.ivFilter.setOnClickListener {
-            Navigation.findNavController(requireView())
-                .navigate(R.id.action_chatFragment_to_filterFragment)
-        }
+//        charFragmentChatBinding.ivFilter.setOnClickListener {
+//            val action1 = ChatFragmentDirections.actionChatFragmentToFilterFragment(expert)
+//            Navigation.findNavController(requireView()).navigate(action1)
+//        }
+
+
         charFragmentChatBinding.ivSort.setOnClickListener {
             openSortBottomSheet()
         }
@@ -83,7 +87,12 @@ class ChatFragment : Fragment(), OnChatClicked {
     }
 
     override fun onClicked(expert: Expert) {
-        val action = ChatFragmentDirections.actionChatFragmentToChatDetailsFragment(expert)
+        action = ChatFragmentDirections.actionChatFragmentToChatDetailsFragment(expert)
+        Navigation.findNavController(requireView()).navigate(action)
+    }
+
+    override fun onFilterClicked(expert: Expert) {
+        action = ChatFragmentDirections.actionChatFragmentToFilterFragment(expert)
         Navigation.findNavController(requireView()).navigate(action)
     }
 

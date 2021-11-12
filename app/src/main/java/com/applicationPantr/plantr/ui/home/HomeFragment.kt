@@ -1,21 +1,12 @@
 package com.applicationPantr.plantr.ui.home
 
-import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.LinearLayout
-import androidx.core.content.ContextCompat
-import androidx.core.view.isVisible
+import androidx.fragment.app.Fragment
 import com.applicationPantr.plantr.R
-import com.applicationPantr.plantr.ui.login.LoginActivity
-import com.applicationPantr.plantr.ui.onBoardingScreen.IntroAdapter
-import com.applicationPantr.plantr.ui.onBoardingScreen.IntroSlider
-import kotlinx.android.synthetic.main.activity_on_boarding.*
+import com.applicationPantr.plantr.ui.chat._chat.UserActivity
+import kotlinx.android.synthetic.main.fragment_chat_details.*
 import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
@@ -23,11 +14,16 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         testimonialViewpager.adapter = testimonialAdapter
-TestimonialSlider()
+        TestimonialSlider()
 
+        btnCheckNowHomeFragment.setOnClickListener {
+            val intent = Intent(context, UserActivity::class.java)
+            startActivity(intent)
+        }
 
 
     }
+
     private fun TestimonialSlider() {
         ivForward.setOnClickListener {
             if (testimonialViewpager.currentItem + 1 < testimonialAdapter.itemCount) {
@@ -35,10 +31,11 @@ TestimonialSlider()
 //            if (SliderViewpager.currentItem>=3)
             }
             ivBackward.setOnClickListener {
-                testimonialViewpager.currentItem =testimonialViewpager.currentItem - 1
+                testimonialViewpager.currentItem = testimonialViewpager.currentItem - 1
             }
         }
     }
+
     private val testimonialAdapter = TestimonialAdapter(
 
         listOf(

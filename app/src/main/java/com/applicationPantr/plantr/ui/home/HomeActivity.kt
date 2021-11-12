@@ -15,9 +15,10 @@ import com.applicationPantr.plantr.databinding.ActivityHomeBinding
 import com.applicationPantr.plantr.ui.scan.ScanActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_home.*
+import java.io.Serializable
 
 @AndroidEntryPoint
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity(),Serializable {
 
     lateinit var activityHomeBinding: ActivityHomeBinding
 

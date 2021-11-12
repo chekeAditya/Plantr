@@ -40,6 +40,9 @@
         <action
             android:id="@+id/action_filterFragment_to_chatFragment"
             app:destination="@id/chatFragment" />
+        <argument
+            android:name="expertData"
+            app:argType="com.applicationPantr.plantr.remote.response.responseModel.Expert" />
     </fragment>
     <fragment
         android:id="@+id/chatDetailsFragment"
@@ -57,7 +60,11 @@
         android:id="@+id/getPlanFragment2"
         android:name="com.applicationPantr.plantr.ui.chat.GetPlanFragment2"
         android:label="GetPlanFragment2"
-        tools:layout="@layout/fragment_get_plan_2"/>
+        tools:layout="@layout/fragment_get_plan_2">
+        <action
+            android:id="@+id/action_getPlanFragment2_to_checkoutSelectPaymentFragment"
+            app:destination="@id/checkoutSelectPaymentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/getPlanFragment"
         android:name="com.applicationPantr.plantr.ui.chat.GetPlanFragment"
@@ -74,5 +81,10 @@
         android:id="@+id/userActivity2"
         android:name="com.applicationPantr.plantr.ui.chat._chat.UserActivity"
         android:label="UserActivity" />
+    <fragment
+        android:id="@+id/checkoutSelectPaymentFragment"
+        android:name="com.applicationPantr.plantr.ui.checkoutFlow.CheckoutSelectPaymentFragment"
+        android:label="fragment_checkout_select_payment"
+        tools:layout="@layout/fragment_checkout_select_payment" />
 
 </navigation>

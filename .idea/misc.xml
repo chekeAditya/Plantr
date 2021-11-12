@@ -5,6 +5,8 @@
       <map>
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/item_left_side_background.xml" value="0.39444444444444443" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/item_right_side_background.xml" value="0.39444444444444443" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/thumb.xml" value="0.4119791666666667" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/track.xml" value="0.403125" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/activity_chat.xml" value="0.22" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/activity_scan.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/activity_splash_screen.xml" value="0.38697916666666665" />
@@ -14,7 +16,8 @@
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/content_google_auth.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_chat.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_chat_details.xml" value="0.35185185185185186" />
-        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_filter.xml" value="0.38697916666666665" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_checkout_select_payment.xml" value="0.38697916666666665" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_filter.xml" value="0.33" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_get_plan.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_get_plan_2.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_home.xml" value="0.38697916666666665" />
