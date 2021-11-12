@@ -20,7 +20,6 @@
         <item name="android:textSize">20sp</item>
         <item name="actionMenuTextColor">#39463B</item>
     </style>
-
     <style name="Theme.Plantr.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
