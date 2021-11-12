@@ -41,25 +41,23 @@
                 android:text="Price Range" />
 
             <com.mohammedalaa.seekbar.DoubleValueSeekBarView
-                android:layout_below="@+id/tvPriceRange"
                 android:id="@+id/double_range_seekbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/tvPriceRange"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:r2CurrentMaxValue="140"
-                app:r2CurrentMinValue="30"
-                app:r2barHeight="15dp"
+                app:r2CurrentMaxValue="100"
+                app:r2CurrentMinValue="0"
+                app:r2barHeight="5dp"
                 app:r2baseColor="@color/navy"
-                app:r2circleFillColor="@color/green"
-                app:r2circleRadius="15dp"
-                app:r2circleTextColor="@color/white"
-                app:r2circleTextSize="@dimen/value_bar_circleTextSize"
-                app:r2fillColor="@color/red"
-                app:r2maxValue="150"
+                app:r2circleFillColor="@color/secondary_3"
+                app:r2circleRadius="@dimen/dp_10"
+                app:r2fillColor="@color/secondary_3"
+                app:r2maxValue="100"
                 app:r2maxValueStep="10"
-                app:r2minValue="15"
-                app:r2minValueStep="5" />
+                app:r2minValue="0"
+                app:r2minValueStep="0" />
 
 
             <TextView
@@ -235,7 +233,6 @@
                     android:text="APPLY"
                     android:textColor="@color/white"
                     android:textSize="@dimen/sp_16" />
-
             </LinearLayout>
 
             <androidx.appcompat.widget.SwitchCompat
