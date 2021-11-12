@@ -4,6 +4,7 @@ import android.util.Log
 import com.applicationPantr.plantr.remote.interfaces.APIClient
 import com.applicationPantr.plantr.remote.response.responseModel.Client
 import com.applicationPantr.plantr.remote.response.responseModel.Expert
+import com.applicationPantr.plantr.remote.response.responseModel.Plant
 import javax.inject.Inject
 
 
@@ -11,6 +12,10 @@ class Repository @Inject constructor(private val apiClient: APIClient){
 
     suspend fun getResponse():List<Expert>{
         return apiClient.getApiResponse().experts
+    }
+
+    suspend fun getPlantsResponse():List<Plant>{
+        return apiClient.getApiResponse().plants
     }
 
 //    suspend fun getResponseOfClients():List<Client>{
