@@ -8,6 +8,7 @@ import androidx.activity.result.contract.ActivityResultContracts
 import com.applicationPantr.plantr.R
 import com.applicationPantr.plantr.databinding.ActivityMainBinding
 import com.applicationPantr.plantr.databinding.ActivityPermissionBinding
+import com.applicationPantr.plantr.ui.home.HomeActivity
 import kotlinx.android.synthetic.main.activity_permission.*
 import org.jetbrains.annotations.Contract
 import java.security.Permission
@@ -30,7 +31,7 @@ class Permission : AppCompatActivity() {
 }
 
         ivNotNow.setOnClickListener {
-            val notificationIntentGoogle = Intent(this, ready::class.java)
+            val notificationIntentGoogle = Intent(this, HomeActivity::class.java)
             startActivity(notificationIntentGoogle)
         }
 

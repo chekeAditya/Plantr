@@ -21,8 +21,8 @@
 
 
 
-
     //Plantr colors
+    <color name="white_gray">#909791</color>
     <color name="Green"> #008080</color>
     <color name="background">#E5E5E5</color>
     <color name="text_primary">#39463B</color>

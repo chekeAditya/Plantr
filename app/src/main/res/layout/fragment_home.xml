@@ -1,10 +1,534 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.home.HomeFragment">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        tools:context=".ui.home.HomeFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/background"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_18"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:background="#EBF5F5"
+                android:elevation="@dimen/dp_5"
+                app:cardCornerRadius="8dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_2">
+
+                    <ImageView
+                        android:id="@+id/iv_pana"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_24"
+                        android:layout_marginTop="42dp"
+                        android:layout_marginBottom="@dimen/dp_27"
+                        android:src="@drawable/ic_pana" />
+
+                    <TextView
+                        android:id="@+id/tv_banner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:layout_marginTop="@dimen/dp_28"
+                        android:layout_marginEnd="@dimen/dp_24"
+                        android:layout_toEndOf="@id/iv_pana"
+                        android:fontFamily="@font/poppins"
+                        android:text="Talk with our Plant Experts and Get a Personalized Plant Care Guide"
+                        android:textColor="@color/main_head_text_green"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_banner"
+                        android:layout_marginStart="@dimen/dp_35"
+                        android:layout_marginTop="6dp"
+                        android:layout_marginBottom="@dimen/dp_26"
+                        android:layout_toEndOf="@id/iv_pana"
+                        android:elevation="@dimen/dp_5"
+                        android:src="@drawable/ic_checknowbtn" />
+
+                    <androidx.viewpager2.widget.ViewPager2
+
+                        android:id="@+id/SliderViewpager"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/iv_pana"
+                        android:layout_marginBottom="17dp" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_24"
+                android:fontFamily="@font/poppins"
+                android:text="Weather Today"
+                android:textColor="@color/main_head_text_green"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+
+                android:background="@color/primary_2"
+                app:cardCornerRadius="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/primary_2"
+                    android:orientation="vertical">
 
 
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:layout_marginBottom="@dimen/dp_14"
+                        app:cardCornerRadius="8dp">
 
-</FrameLayout>
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/white">
+
+                            <TextView
+                                android:id="@+id/tvTemp"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="42dp"
+                                android:layout_marginTop="13dp"
+                                android:layout_marginBottom="@dimen/dp_14"
+                                android:fontFamily="@font/poppins"
+                                android:text="30°C"
+                                android:textColor="@color/primary_green"
+                                android:textSize="48sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_34"
+                                android:layout_marginTop="17dp"
+                                android:layout_toEndOf="@+id/tvTemp"
+                                android:src="@drawable/ic_cloudy" />
+
+                            <TextView
+                                android:id="@+id/tvCloudy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="66dp"
+                                android:layout_marginTop="17dp"
+                                android:layout_toEndOf="@id/tvTemp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Cloudy"
+                                android:textColor="@color/text_secondary"
+                                android:textSize="16sp" />
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tvCloudy"
+                                android:layout_marginStart="32dp"
+                                android:layout_marginTop="@dimen/dp_8"
+                                android:layout_toEndOf="@id/tvTemp"
+                                android:src="@drawable/ic_frame_home" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_24"
+                        android:layout_marginEnd="@dimen/dp_24"
+                        android:layout_marginBottom="@dimen/dp_14"
+                        android:fontFamily="@font/poppins"
+                        android:text="Without sunlight, the plants are unable to convert nutrients and carbon-dioxide to energy through the photosynthesis process. On cloudy days, they produce much less of the energy they need to grow and bloom."
+                        android:textColor="@color/white_gray"
+                        android:textSize="12sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginBottom="@dimen/dp_26"
+                        android:src="@drawable/ic_addplants" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvExpert"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:fontFamily="@font/poppins"
+                    android:text="Our Top Experts"
+                    android:textColor="@color/main_head_text_green"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tvExpert"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="India’s best plant expert at your service"
+                    android:textColor="@color/white_gray"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvViewAllExpert"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="27.91dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="View all"
+                    android:textAllCaps="true"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="128dp"
+                        android:layout_height="136dp"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_24"
+                        app:cardCornerRadius="@dimen/dp_8"
+                        app:cardElevation="@dimen/dp_5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_gravity="center"
+                                android:id="@+id/ivSumit"
+                                android:layout_width="@dimen/dp_54"
+                                android:layout_height="@dimen/dp_54"
+                                android:layout_marginTop="@dimen/dp_16"
+                                android:src="@drawable/sumit" />
+
+                            <TextView
+                                android:id="@+id/tvExpertName"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Kirti Mishra"
+                                android:textColor="@color/BNWBlack"
+                                android:textSize="@dimen/sp_16" />
+
+                            <TextView
+                                android:id="@+id/tvPlants"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Rare Plants"
+                                android:textColor="@color/BNWDarkGrey"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="128dp"
+                        android:layout_height="136dp"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_24"
+                        app:cardCornerRadius="@dimen/dp_8"
+                        app:cardElevation="@dimen/dp_5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_gravity="center"
+                                android:layout_width="@dimen/dp_54"
+                                android:layout_height="@dimen/dp_54"
+                                android:layout_marginTop="@dimen/dp_16"
+                                android:src="@drawable/prachi" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Sumit Singh"
+                                android:textColor="@color/BNWBlack"
+                                android:textSize="@dimen/sp_16" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Succulents"
+                                android:textColor="@color/BNWDarkGrey"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="128dp"
+                        android:layout_height="136dp"
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:layout_marginBottom="@dimen/dp_24"
+                        app:cardCornerRadius="@dimen/dp_8"
+                        app:cardElevation="@dimen/dp_5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_gravity="center"
+                                android:layout_width="@dimen/dp_54"
+                                android:layout_height="@dimen/dp_54"
+                                android:layout_marginTop="@dimen/dp_16"
+                                android:src="@drawable/gopal" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="8dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Vijay Sahu"
+                                android:textColor="@color/BNWBlack"
+                                android:textSize="@dimen/sp_16" />
+
+                            <TextView
+
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="8dp"
+                                android:fontFamily="@font/poppins"
+                                android:text="Flowering plants"
+                                android:textColor="@color/BNWDarkGrey"
+                                android:textSize="@dimen/sp_12" />
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvPlantsMall"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:fontFamily="@font/poppins"
+                    android:text="Shop from PlantsMall"
+                    android:textColor="@color/main_head_text_green"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvViewAllPlants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginEnd="27.91dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="View all"
+                    android:textAllCaps="true"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <ImageView
+                    android:id="@+id/ivRare"
+                    android:layout_width="182dp"
+                    android:layout_height="136dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/dp_16"
+
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:src="@drawable/rareplant" />
+
+                <ImageView
+                    android:id="@+id/ivEssential"
+                    android:layout_width="182dp"
+                    android:layout_height="136dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:layout_marginBottom="@dimen/dp_16"
+                    android:src="@drawable/plantessential" />
+
+                <ImageView
+                    android:id="@+id/ivFlowering"
+                    android:layout_width="182dp"
+                    android:layout_height="136dp"
+                    android:layout_below="@id/ivRare"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:src="@drawable/floweringplant" />
+
+                <ImageView
+                    android:id="@+id/ivTools"
+                    android:layout_width="182dp"
+                    android:layout_height="136dp"
+                    android:layout_below="@id/ivEssential"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:src="@drawable/shop" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvBlogs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:fontFamily="@font/poppins"
+                    android:text="Latest Blogs"
+                    android:textColor="@color/main_head_text_green"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvViewAllBlogs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="27.91dp"
+                    android:fontFamily="@font/poppins"
+                    android:text="View all"
+                    android:textAllCaps="true"
+                    android:textColor="@color/orange"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/BlogsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_18" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tvTestimonials"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:layout_marginTop="@dimen/dp_24"
+                    android:fontFamily="@font/poppins"
+                    android:text="Testimonials"
+                    android:textColor="@color/main_head_text_green"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:id="@+id/ivBackward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="63dp"
+                    android:src="@drawable/ic_backword" />
+
+                <ImageView
+                    android:id="@+id/ivForward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/dp_30"
+                    android:layout_marginEnd="@dimen/dp_23"
+                    android:layout_toStartOf="@id/ivForward"
+                    android:src="@drawable/ic_forward" />
+            </RelativeLayout>
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/testimonialViewpager"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="17dp" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:src="@drawable/ic_banner" />
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+</layout>
