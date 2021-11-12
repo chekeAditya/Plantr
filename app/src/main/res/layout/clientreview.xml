@@ -1,28 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-
-    <data>
-
-        <variable
-            name="clients"
-            type="com.applicationPantr.plantr.remote.response.responseModel.Client" />
-    </data>
-
-    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    >
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dp_16"
         app:cardCornerRadius="@dimen/dp_16"
-        app:cardElevation="@dimen/dp_10">
+        android:layout_margin="@dimen/dp_16"
+        app:cardElevation="@dimen/dp_10"
+        android:layout_height="wrap_content">
+
 
         <RelativeLayout
+            android:background="#EBF5F5"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#EBF5F5">
+            android:layout_height="wrap_content">
 
             <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/ciClientImage"
+                android:id="@+id/ClientImage"
                 android:layout_width="@dimen/dp_34"
                 android:layout_height="@dimen/dp_34"
                 android:layout_marginStart="@dimen/dp_16"
@@ -32,12 +29,12 @@
                 android:src="@color/secondary_3" />
 
             <TextView
-                android:id="@+id/tvClientName"
+                android:fontFamily="@font/poppins"
+                android:id="@+id/ClientName"
                 style="@style/TextView_Filter"
                 android:layout_marginTop="@dimen/dp_16"
-                android:layout_toEndOf="@+id/ciClientImage"
-                android:fontFamily="@font/poppins"
-                android:text="@{clients.name}"
+                android:layout_toEndOf="@+id/ClientImage"
+                android:text="Kaustubhh Bakare"
                 android:textSize="@dimen/sp_18"
                 android:textStyle="bold" />
 
@@ -45,13 +42,13 @@
                 android:id="@+id/expert_Rating"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/tvClientName"
+                android:layout_below="@+id/ClientName"
                 android:layout_marginTop="@dimen/dp_5"
-                android:layout_toEndOf="@+id/ciClientImage"
+                android:layout_toEndOf="@+id/ClientImage"
                 android:src="@drawable/ic_rating" />
 
             <ImageView
-                android:id="@+id/doubleCommas"
+                android:id="@+id/punctuation"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/expert_Rating"
@@ -61,21 +58,20 @@
                 android:text="@string/client_desc" />
 
             <TextView
+                android:id="@+id/Descr"
                 style="@style/TopHeading"
                 android:layout_below="@id/expert_Rating"
                 android:layout_marginStart="@dimen/dp_5"
                 android:layout_marginTop="@dimen/dp_16"
                 android:layout_marginEnd="@dimen/dp_16"
                 android:layout_marginBottom="@dimen/dp_16"
-                android:layout_toEndOf="@+id/doubleCommas"
                 android:fontFamily="@font/poppins"
-                android:text="@{clients.review}"
+                android:text="@string/client_desc"
+                android:layout_toEndOf="@id/punctuation"
                 android:textSize="@dimen/sp_12" />
 
 
         </RelativeLayout>
 
-
     </androidx.cardview.widget.CardView>
-
-</layout>
+</LinearLayout>
