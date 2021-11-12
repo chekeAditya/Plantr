@@ -126,6 +126,8 @@ class ScanActivity : AppCompatActivity() {
                     visibility = View.VISIBLE
                 }
                 tvScanPlantName.text = "Plant Name"
+                tvTapForMore.visibility = View.VISIBLE
+                ivTapForMore.visibility = View.VISIBLE
             }
 
         }
