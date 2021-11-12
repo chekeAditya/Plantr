@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.chat.GetPlanFragment">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvPersonalizedCard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_20"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:elevation="@dimen/dp_20"
+                app:cardCornerRadius="@dimen/dp_16">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/getPersonalisedImage"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="32dp"
+                        android:src="@drawable/ic_get_personalised_plan" />
+
+
+                    <TextView
+                        android:id="@+id/tvGetPersonalized"
+                        style="@style/TextView_Filter"
+                        android:layout_below="@+id/getPersonalisedImage"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:text="Get Personalized"
+                        android:textSize="@dimen/sp_24"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvPlantCarePlan"
+                        style="@style/TextView_Filter"
+                        android:layout_below="@+id/tvGetPersonalized"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginStart="@dimen/dp_10"
+                        android:text="Plant Care Plan"
+                        android:textSize="@dimen/sp_24"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvPlantCarePlan"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/dp_24"
+                        android:layout_marginBottom="@dimen/dp_20">
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="@dimen/dp_8"
+                            android:layout_height="@dimen/dp_8"
+                            android:layout_margin="@dimen/dp_4"
+                            android:src="@color/BNWBlack" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="@dimen/dp_8"
+                            android:layout_height="@dimen/dp_8"
+                            android:layout_margin="@dimen/dp_4"
+                            android:src="@color/grey" />
+
+                        <de.hdodenhof.circleimageview.CircleImageView
+                            android:layout_width="@dimen/dp_8"
+                            android:layout_height="@dimen/dp_8"
+                            android:layout_margin="@dimen/dp_4"
+                            android:src="@color/grey" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                android:id="@+id/tvSelectPlan"
+                style="@style/TextView_Filter"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_24"
+                android:text="Select Plan"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="normal" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvWeeklyPlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                app:cardCornerRadius="@dimen/dp_8"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/TextView_Filter"
+                        android:layout_marginStart="@dimen/dp_24"
+                        android:layout_marginTop="@dimen/dp_19"
+                        android:layout_marginBottom="@dimen/dp_19"
+                        android:text="WEEKLY PLAN: 700₹"
+                        android:textSize="@dimen/sp_18"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp_22"
+                        android:src="@drawable/ic_right_side_arrow_black" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvMonthlyPlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                app:cardCornerRadius="@dimen/dp_8"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/TextView_Filter"
+                        android:layout_marginStart="@dimen/dp_24"
+                        android:layout_marginTop="@dimen/dp_19"
+                        android:layout_marginBottom="@dimen/dp_19"
+                        android:text="MONTHLY PLAN: 1,799₹"
+                        android:textSize="@dimen/sp_18"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp_22"
+                        android:src="@drawable/ic_right_side_arrow_black" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvYearlyPlan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                app:cardCornerRadius="@dimen/dp_8"
+                app:cardElevation="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        style="@style/TextView_Filter"
+                        android:layout_marginStart="@dimen/dp_24"
+                        android:layout_marginTop="@dimen/dp_19"
+                        android:layout_marginBottom="@dimen/dp_19"
+                        android:text="YEARLY PLAN: 9,999"
+                        android:textSize="@dimen/sp_18"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/dp_22"
+                        android:src="@drawable/ic_right_side_arrow_black" />
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <TextView
+                style="@style/TextView_Filter"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginStart="@dimen/dp_24"
+                android:layout_marginTop="@dimen/dp_28"
+                android:layout_marginBottom="@dimen/dp_28"
+                android:drawablePadding="@dimen/dp_10"
+                android:padding="5dp"
+                android:text="Enjoy 1 Free session"
+                android:textColor="@color/Green"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold"
+                app:drawableEndCompat="@drawable/ic_right_side_arrow_black" />
+
+        </LinearLayout>
+
+    </ScrollView>
+</layout>

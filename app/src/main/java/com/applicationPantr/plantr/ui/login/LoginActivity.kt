@@ -11,9 +11,10 @@ import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
 import android.content.Intent
 import com.google.firebase.auth.FirebaseAuth
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_log_in.*
 
-
+@AndroidEntryPoint
 open class LoginActivity : AppCompatActivity() {
 private lateinit var mAuth :FirebaseAuth
 

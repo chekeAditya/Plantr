@@ -6,15 +6,14 @@ import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.applicationPantr.plantr.R
 import com.applicationPantr.plantr.databinding.ItemLayoutChatBinding
-import com.applicationPantr.plantr.interfaces.OnChatClicked
-import com.applicationPantr.plantr.remote.response.ChatResponse
+import com.applicationPantr.plantr.remote.interfaces.OnChatClicked
+import com.applicationPantr.plantr.remote.response.responseModel.Expert
 import com.bumptech.glide.Glide
 
 class ChatAdapter(
-    private val charResponseList: List<ChatResponse>,
+    private val expertResponseList: List<Expert>,
     private val onChatClicked: OnChatClicked
 ) : RecyclerView.Adapter<ChatViewHolder>() {
-
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {
         val itemLayoutChatBinding: ItemLayoutChatBinding = DataBindingUtil.inflate(
@@ -25,12 +24,12 @@ class ChatAdapter(
     }
 
     override fun onBindViewHolder(holder: ChatViewHolder, position: Int) {
-        val charResponse = charResponseList[position]
-        holder.onBind(charResponse)
+        val expertResponse = expertResponseList[position]
+        holder.onBind(expertResponse)
     }
 
     override fun getItemCount(): Int {
-        return charResponseList.size
+        return expertResponseList.size
     }
 }
 
@@ -39,10 +38,10 @@ class ChatViewHolder(
     private val itemLayoutChatBinding: ItemLayoutChatBinding,
     private val onChatClicked: OnChatClicked
 ) : RecyclerView.ViewHolder(itemLayoutChatBinding.root) {
-    fun onBind(chatResponse: ChatResponse) {
+    fun onBind(expertResponse: Expert) {
         itemLayoutChatBinding.onClickedChat = onChatClicked
-        itemLayoutChatBinding.chatReponse = chatResponse
-        Glide.with(itemLayoutChatBinding.cvImage).load(chatResponse.image)
+        itemLayoutChatBinding.expertsResponse = expertResponse
+        Glide.with(itemLayoutChatBinding.cvImage).load(expertResponse.image)
             .into(itemLayoutChatBinding.expertImage)
     }
 }

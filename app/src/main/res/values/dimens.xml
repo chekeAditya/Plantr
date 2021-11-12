@@ -63,4 +63,6 @@
     <dimen name="dp_127">127dp</dimen>
     <dimen name="dp_64">64dp</dimen>
     <dimen name="dp_34">34dp</dimen>
+    <dimen name="sp_48">48sp</dimen>
+    <dimen name="dp_39">39dp</dimen>
 </resources>

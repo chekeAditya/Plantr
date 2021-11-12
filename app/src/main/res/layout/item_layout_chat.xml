@@ -3,12 +3,13 @@
 
     <data>
         <variable
-            name="chatReponse"
-            type="com.applicationPantr.plantr.remote.response.ChatResponse" />
+            name="expertsResponse"
+            type="com.applicationPantr.plantr.remote.response.responseModel.Expert" />
+
 
         <variable
             name="onClickedChat"
-            type="com.applicationPantr.plantr.interfaces.OnChatClicked" />
+            type="com.applicationPantr.plantr.remote.interfaces.OnChatClicked" />
     </data>
 
     <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
@@ -56,11 +57,11 @@
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/expert_Rating"
                 android:layout_centerHorizontal="true"
-                android:textSize="@dimen/sp_16"
                 android:layout_marginTop="@dimen/dp_11"
                 android:fontFamily="@font/poppins_medium"
-                android:text="Kirti Mishra"
-                android:textColor="@color/BNWBlack" />
+                android:text="@{expertsResponse.name}"
+                android:textColor="@color/BNWBlack"
+                android:textSize="@dimen/sp_16" />
 
             <TextView
                 android:id="@+id/expert_charges"
@@ -70,9 +71,9 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="@dimen/dp_8"
                 android:fontFamily="@font/poppins_medium"
-                android:text="Avg: 120rs/min"
-                android:textSize="@dimen/sp_12"
-                android:textColor="@color/BNWDarkGrey" />
+                android:text="@{expertsResponse.avgCharges}"
+                android:textColor="@color/BNWDarkGrey"
+                android:textSize="@dimen/sp_12" />
 
             <Button
                 android:id="@+id/btn_chat"
@@ -84,7 +85,7 @@
                 android:layout_marginEnd="@dimen/dp_19"
                 android:layout_marginBottom="@dimen/dp_16"
                 android:background="@drawable/rectangulate_button"
-                android:onClick="@{() ->onClickedChat.onClicked(chatReponse)}"
+                android:onClick="@{() ->onClickedChat.onClicked(expertsResponse)}"
                 android:text="CHAT"
                 android:textSize="18sp"
                 android:textColor="@color/primary_green" />

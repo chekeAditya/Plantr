@@ -5,7 +5,7 @@
     <data>
         <variable
             name="onSortButtonClicked"
-            type="com.applicationPantr.plantr.interfaces.OnChatClicked" />
+            type="com.applicationPantr.plantr.remote.interfaces.OnChatClicked" />
     </data>
 
     <RelativeLayout
