@@ -40,4 +40,5 @@
     <color name="main_dark_green_bg">#97CBCB</color>
     <color name="main_orange_bg">#FFC495</color>
     <color name="main_text_light">#909791</color>
+    <color name="light_green">#D4F9DA</color>
 </resources>

@@ -1,8 +1,15 @@
 package com.applicationPantr.plantr.ui.chat._chat
 
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.os.CountDownTimer
 import android.util.Log
+import android.view.Gravity
+import android.view.LayoutInflater
+import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.applicationPantr.plantr.R
@@ -23,16 +30,20 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import java.io.Serializable
 import java.util.*
+import java.util.concurrent.TimeUnit
 import kotlin.collections.HashMap
 
-class ChatActivity : AppCompatActivity(),Serializable {
+
+class ChatActivity : AppCompatActivity(), Serializable {
 
     var firebaseUser: FirebaseUser? = null
     var reference: DatabaseReference? = null
     var chatList = ArrayList<Chat>()
     var topic = ""
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
+        showAlertBox()
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_chat)
         chatRecyclerView.layoutManager =
@@ -136,4 +147,62 @@ class ChatActivity : AppCompatActivity(),Serializable {
                 Log.e("TAG", e.toString())
             }
         }
+
+    private fun showAlertBox() {
+        val builder = AlertDialog.Builder(this)
+        val layoutInflaterAndroid = LayoutInflater.from(this)
+        val view: View = layoutInflaterAndroid.inflate(R.layout.item_alert_box_start, null)
+        builder.setView(view)
+        builder.setCancelable(false)
+        val alertDialog = builder.create()
+
+        alertDialog.show()
+        alertDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        alertDialog.window!!.setGravity(Gravity.BOTTOM)
+        view.findViewById<View>(R.id.btnStart).setOnClickListener { v: View? ->
+            startTimer()
+            alertDialog.dismiss()
+        }
+        view.findViewById<View>(R.id.btnExit)
+            .setOnClickListener { v: View? -> alertDialog.dismiss() }
+    }
+
+    private fun startTimer() {
+        val duration = TimeUnit.MINUTES.toMillis(1)
+        object : CountDownTimer(duration, 1000) {
+            override fun onTick(l: Long) {
+                val sDuration = String.format(
+                    Locale.ENGLISH, "%02d : %02d",
+                    TimeUnit.MILLISECONDS.toMinutes(l),
+                    TimeUnit.MILLISECONDS.toSeconds(l) -
+                            TimeUnit.MINUTES.toSeconds(TimeUnit.MILLISECONDS.toMinutes(l))
+                )
+                tvTimer.text = sDuration
+            }
+
+            override fun onFinish() {
+                tvTimer.visibility = View.GONE
+                showEndDialogBox()
+            }
+        }.start()
+    }
+
+    private fun showEndDialogBox() {
+        val builder = AlertDialog.Builder(this)
+        val layoutInflaterAndroid = LayoutInflater.from(this)
+        val view: View = layoutInflaterAndroid.inflate(R.layout.item_alert_box_end, null)
+        builder.setView(view)
+        builder.setCancelable(false)
+        val alertDialog = builder.create()
+        alertDialog.show()
+        alertDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        alertDialog.window!!.setGravity(Gravity.BOTTOM)
+        view.findViewById<View>(R.id.btnJoinPlans).setOnClickListener {
+            //go to getPlans Ad
+        }
+        view.findViewById<View>(R.id.btnExit)
+            .setOnClickListener {
+//go to home activity
+            }
+    }
 }

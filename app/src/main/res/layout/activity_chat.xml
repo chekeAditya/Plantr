@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        tools:context=".ui.chat._chat.ChatActivity">
 
         <androidx.cardview.widget.CardView
             android:id="@+id/l1"
@@ -69,6 +71,15 @@
                     android:textSize="@dimen/sp_12"
                     android:textStyle="bold" />
 
+                <TextView
+                    android:id="@+id/tvTimer"
+                    style="@style/TopHeading"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="@dimen/dp_20"
+                    android:text="03:00"
+                    android:textColor="@color/orange" />
+
             </RelativeLayout>
 
         </androidx.cardview.widget.CardView>
@@ -83,77 +94,78 @@
 
 
         <androidx.cardview.widget.CardView
-            app:cardElevation="@dimen/dp_10"
-            app:cardCornerRadius="32dp"
-            android:layout_alignParentBottom="true"
             android:id="@+id/r1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:cardCornerRadius="32dp"
+            app:cardElevation="@dimen/dp_10">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/dp_8">
 
-                    <RelativeLayout
-                        android:layout_gravity="center_vertical"
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/dp_46"
+                        android:layout_height="@dimen/dp_46"
+                        android:src="@color/Green" />
+
+                    <ImageView
                         android:layout_width="wrap_content"
-                        android:layout_margin="@dimen/dp_8"
-                        android:layout_height="wrap_content">
-
-
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="@dimen/dp_46"
-                            android:layout_height="@dimen/dp_46"
-                            android:src="@color/Green" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_baseline_add_24" />
-
-                    </RelativeLayout>
-
-                    <EditText
-                        android:id="@+id/etMessage"
-                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:background="@color/white"
-                        android:fontFamily="@font/poppins"
-                        android:hint="Type here"
-                        android:textSize="@dimen/sp_20"
-                        android:inputType="text"
-                        android:padding="12dp"
-                        android:textColor="@color/BNWBlack" />
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_baseline_add_24" />
 
-                    <RelativeLayout
-                        android:layout_gravity="center_vertical"
-                        android:id="@+id/btnSendMessage"
+                </RelativeLayout>
+
+                <EditText
+                    android:id="@+id/etMessage"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:fontFamily="@font/poppins"
+                    android:hint="Type here"
+                    android:inputType="text"
+                    android:padding="12dp"
+                    android:textColor="@color/BNWBlack"
+                    android:textSize="@dimen/sp_20" />
+
+                <RelativeLayout
+                    android:id="@+id/btnSendMessage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="@dimen/dp_8">
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="@dimen/dp_46"
+                        android:layout_height="@dimen/dp_46"
+                        android:src="@color/Green" />
+
+                    <ImageView
                         android:layout_width="wrap_content"
-                        android:layout_margin="@dimen/dp_8"
-                        android:layout_height="wrap_content">
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:src="@drawable/ic_send_flight" />
 
+                </RelativeLayout>
 
-                        <de.hdodenhof.circleimageview.CircleImageView
-                            android:layout_width="@dimen/dp_46"
-                            android:layout_height="@dimen/dp_46"
-                            android:src="@color/Green" />
-
-                        <ImageView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/ic_send_flight" />
-
-                    </RelativeLayout>
-
-                </LinearLayout>
+            </LinearLayout>
 
 
         </androidx.cardview.widget.CardView>
+
 
     </RelativeLayout>
 

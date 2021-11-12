@@ -14,7 +14,6 @@ import com.applicationPantr.plantr.R
 import com.applicationPantr.plantr.databinding.ActivityHomeBinding
 import com.applicationPantr.plantr.ui.scan.ScanActivity
 import dagger.hilt.android.AndroidEntryPoint
-import kotlinx.android.synthetic.main.activity_home.*
 import java.io.Serializable
 
 @AndroidEntryPoint
