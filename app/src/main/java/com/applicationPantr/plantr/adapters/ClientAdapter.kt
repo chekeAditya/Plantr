@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.applicationPantr.plantr.R
-import com.applicationPantr.plantr.databinding.ItemClientReviewsBinding
+import com.applicationPantr.plantr.databinding.ItemClientReviewBinding
 import com.applicationPantr.plantr.remote.response.responseModel.Client
 import com.bumptech.glide.Glide
 
@@ -14,9 +14,9 @@ class ClientAdapter(
 ) : RecyclerView.Adapter<ClientViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ClientViewHolder {
-        val itemClientBinding: ItemClientReviewsBinding = DataBindingUtil.inflate(
+        val itemClientBinding: ItemClientReviewBinding= DataBindingUtil.inflate(
             LayoutInflater.from(parent.context),
-            R.layout.item_client_reviews, parent, false
+            R.layout.item_client_review, parent, false
         )
         return ClientViewHolder(itemClientBinding)
     }
@@ -33,7 +33,7 @@ class ClientAdapter(
 
 //viewHolder
 class ClientViewHolder(
-    private val itemClientReviewsBinding: ItemClientReviewsBinding,
+    private val itemClientReviewsBinding: ItemClientReviewBinding,
 ) : RecyclerView.ViewHolder(itemClientReviewsBinding.root) {
     fun onBind(client: Client) {
         itemClientReviewsBinding.clients = client

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="clients"
+            type="com.applicationPantr.plantr.remote.response.responseModel.Client" />
+    </data>
+
+    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_16"
+        app:cardCornerRadius="@dimen/dp_16"
+        app:cardElevation="@dimen/dp_10">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#EBF5F5">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ciClientImage"
+                android:layout_width="@dimen/dp_34"
+                android:layout_height="@dimen/dp_34"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:src="@color/secondary_3" />
+
+            <TextView
+                android:id="@+id/tvClientName"
+                style="@style/TextView_Filter"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_toEndOf="@+id/ciClientImage"
+                android:fontFamily="@font/poppins"
+                android:text="@{clients.name}"
+                android:textSize="@dimen/sp_18"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/expert_Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvClientName"
+                android:layout_marginTop="@dimen/dp_5"
+                android:layout_toEndOf="@+id/ciClientImage"
+                android:src="@drawable/ic_rating" />
+
+            <ImageView
+                android:id="@+id/doubleCommas"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expert_Rating"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:src="@drawable/ic_double_commas"
+                android:text="@string/client_desc" />
+
+            <TextView
+                style="@style/TopHeading"
+                android:layout_below="@id/expert_Rating"
+                android:layout_marginStart="@dimen/dp_5"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:layout_toEndOf="@+id/doubleCommas"
+                android:fontFamily="@font/poppins"
+                android:text="@{clients.review}"
+                android:textSize="@dimen/sp_12" />
+
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -15,7 +15,7 @@ import com.applicationPantr.plantr.adapters.ClientAdapter
 import com.applicationPantr.plantr.adapters.GalleryAdapter
 import com.applicationPantr.plantr.adapters.MoreExpertAdapter
 import com.applicationPantr.plantr.databinding.FragmentChatDetailsBinding
-import com.applicationPantr.plantr.databinding.ItemClientReviewsBinding
+import com.applicationPantr.plantr.databinding.ItemClientReviewBinding
 import com.applicationPantr.plantr.databinding.ItemGalleryBinding
 import com.applicationPantr.plantr.databinding.ItemMoreExpertBinding
 import com.applicationPantr.plantr.remote.response.responseModel.Client
@@ -28,7 +28,7 @@ import kotlinx.android.synthetic.main.fragment_chat_details.*
 @AndroidEntryPoint
 class ChatDetailsFragment : Fragment(R.layout.fragment_chat_details) {
     //client
-    lateinit var clientBinding: ItemClientReviewsBinding
+    lateinit var clientBinding: ItemClientReviewBinding
     lateinit var clientAdapter: ClientAdapter
 
     //more_expert
@@ -76,7 +76,7 @@ class ChatDetailsFragment : Fragment(R.layout.fragment_chat_details) {
     }
 
     private fun settingUpClient() {
-        clientBinding = ItemClientReviewsBinding.inflate(layoutInflater)
+        clientBinding = ItemClientReviewBinding.inflate(layoutInflater)
         clientAdapter = ClientAdapter(clientList)
         clientBinding.apply {
             recyclerViewClientReviews.adapter = clientAdapter
