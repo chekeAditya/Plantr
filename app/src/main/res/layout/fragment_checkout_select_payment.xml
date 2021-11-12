@@ -25,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CHECKOUT"
+        android:fontFamily="@font/poppins"
         android:textSize="20sp"
         android:textColor="@color/white"
         android:layout_centerHorizontal="true"
@@ -50,6 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="WEEKLY PLAN"
+            android:fontFamily="@font/poppins"
             android:textColor="@color/main_head_text_green"
             android:textSize="15sp"/>
 
@@ -58,6 +60,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Sub Total"
+            android:fontFamily="@font/poppins"
             android:layout_below="@+id/tvPlanCheckout"
             android:layout_marginTop="20dp"/>
 
@@ -66,6 +69,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="640 Rs"
+            android:fontFamily="@font/poppins"
             android:layout_alignParentEnd="true"
             android:layout_below="@+id/tvPlanCheckout"
             android:layout_marginTop="20dp"/>
@@ -75,6 +79,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Taxes &amp; Fees"
+            android:fontFamily="@font/poppins"
             android:layout_below="@id/tvSubTotalTextCheckout"
             android:layout_marginTop="10dp"/>
 
@@ -83,6 +88,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="60.26 Rs"
+            android:fontFamily="@font/poppins"
             android:layout_alignParentEnd="true"
             android:layout_below="@+id/tvSubTotalCheckout"
             android:layout_marginTop="10dp"/>
@@ -100,6 +106,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="TOTAL"
+            android:fontFamily="@font/poppins"
             android:textColor="@color/main_head_text_green"
             android:textSize="13sp"
             android:layout_marginTop="10dp"
@@ -110,6 +117,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="700.26 Rs"
+            android:fontFamily="@font/poppins"
             android:layout_alignParentEnd="true"
             android:layout_below="@id/vBelowTaxesCheckout"
             android:layout_marginTop="10dp"/>
@@ -123,6 +131,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PAYMENT METHOD"
+        android:fontFamily="@font/poppins"
         android:textColor="@color/main_head_text_green"
         android:textSize="15sp"
         android:layout_below="@+id/cvPlanDetailsCheckout"
@@ -157,6 +166,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="Enter mobile number or UPI id"
+            android:fontFamily="@font/poppins"
             android:textSize="12sp"
             android:layout_marginTop="10dp"
             android:layout_marginHorizontal="15dp"
@@ -175,6 +185,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="VERIFY"
+                android:fontFamily="@font/poppins"
                 android:textColor="@color/white"
                 android:paddingHorizontal="40dp"
                 android:paddingVertical="10dp"
@@ -200,6 +211,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="NEXT"
+            android:fontFamily="@font/poppins"
             android:textSize="15sp"
             android:textColor="@color/white"
             android:layout_gravity="center"
