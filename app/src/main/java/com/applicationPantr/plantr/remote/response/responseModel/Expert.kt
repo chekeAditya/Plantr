@@ -2,6 +2,7 @@ package com.applicationPantr.plantr.remote.response.responseModel
 
 
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
 data class Expert(
     @SerializedName("about")
@@ -24,4 +25,4 @@ data class Expert(
     val minChat: String,
     @SerializedName("name")
     val name: String
-)
+) : Serializable

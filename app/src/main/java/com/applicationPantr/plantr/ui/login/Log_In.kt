@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.applicationPantr.plantr.R
+import com.applicationPantr.plantr.ui.chat._chat.UserActivity
 import com.applicationPantr.plantr.ui.home.HomeActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.fragment_log_in.*
@@ -58,7 +59,7 @@ class Log_In : Fragment(R.layout.fragment_log_in) {
                         context,
                         "Login successful!!" + mAuth.currentUser!!.email, Toast.LENGTH_LONG
                     ).show()
-                    val notificationIntent = Intent(activity, ready::class.java)
+                    val notificationIntent = Intent(activity, UserActivity::class.java)
                     startActivity(notificationIntent)
 
                 } else {

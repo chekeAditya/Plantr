@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
 
     <data>
         <variable
-            name="experts"
+            name="expertsResponse"
             type="com.applicationPantr.plantr.remote.response.responseModel.Expert" />
     </data>
     
-    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,13 +15,14 @@
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
 
             <ImageView
+                android:scaleType="centerCrop"
                 android:id="@+id/ivBgImage"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_220"
-                android:background="@color/black" />
+                android:background="@drawable/bg_img" />
 
             <de.hdodenhof.circleimageview.CircleImageView
                 android:layout_width="90dp"
@@ -60,7 +60,6 @@
                 android:layout_marginStart="@dimen/dp_10"
                 android:layout_marginTop="@dimen/dp_8"
                 android:layout_toEndOf="@+id/ciExpertImage"
-                android:text="Saraswati Ketam"
                 android:textSize="@dimen/sp_18"
                 android:textStyle="bold" />
 
@@ -127,7 +126,6 @@
                             android:id="@+id/tvHappyClients"
                             style="@style/TopHeading"
                             android:layout_weight="1"
-                            android:text="228"
                             android:textSize="@dimen/sp_24"
                             android:textStyle="bold" />
 
@@ -135,7 +133,6 @@
                             android:id="@+id/tvMinsSpentChat"
                             style="@style/TopHeading"
                             android:layout_weight="1"
-                            android:text="350K"
                             android:textSize="@dimen/sp_24"
                             android:textStyle="bold" />
 
@@ -143,7 +140,6 @@
                             android:id="@+id/tvMinsSpentCalls"
                             style="@style/TopHeading"
                             android:layout_weight="1"
-                            android:text="120K"
                             android:textSize="@dimen/sp_24"
                             android:textStyle="bold" />
 
@@ -221,7 +217,6 @@
                 android:layout_marginStart="@dimen/dp_16"
                 android:layout_marginTop="@dimen/dp_8"
                 android:layout_marginEnd="@dimen/dp_16"
-                android:text="@string/about_me_desc"
                 android:textColor="@color/BNWDarkGrey"
                 android:textSize="@dimen/sp_14"
                 android:textStyle="bold" />
@@ -270,6 +265,69 @@
                 android:layout_below="@+id/tvClientReview"
                 android:layout_marginStart="@dimen/dp_16"
                 android:layout_marginTop="@dimen/dp_16" />
+
+            <LinearLayout
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_50"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rectangle_green_bg"
+                        android:paddingTop="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_16"
+                        android:text="Call"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Call"
+                        android:textColor="@color/white"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:drawableStart="@drawable/ic_camera"
+                        android:layout_centerInParent="true"/>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_weight="1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:layout_marginStart="@dimen/dp_16"
+                        android:layout_marginEnd="@dimen/dp_8"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/rectangle_green_bg"
+                        android:paddingTop="@dimen/dp_16"
+                        android:paddingBottom="@dimen/dp_16"
+                        android:text="Call"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Chat"
+                        android:textColor="@color/white"
+                        android:drawablePadding="@dimen/dp_10"
+                        android:drawableStart="@drawable/ic_chat_expert"
+                        android:layout_centerInParent="true"/>
+
+
+                </RelativeLayout>
+
+            </LinearLayout>
 
         </RelativeLayout>
 

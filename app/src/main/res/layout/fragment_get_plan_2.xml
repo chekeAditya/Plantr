@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".ui.chat.GetPlanFragment2">
+
+
+        <TextView
+            android:id="@+id/tvSelectPlan"
+            style="@style/TextView_Filter"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_24"
+            android:text="Select Plan"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="normal" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/WeeklyPlan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:cardCornerRadius="@dimen/dp_8"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvWeeklyPlan700"
+                    style="@style/TextView_Filter"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_19"
+                    android:layout_marginBottom="@dimen/dp_19"
+                    android:text="WEEKLY PLAN: 700₹"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/down_arrow_weekly_plan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/sp_25"
+                    android:layout_marginEnd="@dimen/dp_22"
+                    android:src="@drawable/ic_downside_arrow" />
+
+                <RelativeLayout
+                    android:id="@+id/rlWeeklyPlan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvWeeklyPlan700"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/price_700z"
+                        style="@style/TopHeading"
+                        android:layout_marginStart="@dimen/dp_24"
+                        android:text="700₹"
+                        android:textColor="@color/Green"
+                        android:textSize="@dimen/sp_48" />
+
+                    <TextView
+                        style="@style/TopHeading"
+                        android:layout_above="@+id/viewLine"
+                        android:layout_marginStart="@dimen/dp_39"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_toEndOf="@+id/price_700z"
+                        android:text="only"
+                        android:textColor="@color/Green"
+                        android:textSize="@dimen/sp_24" />
+
+                    <View
+                        android:id="@+id/viewLine"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/price_700z"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:layout_marginTop="16sp"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:layout_marginBottom="@dimen/dp_11"
+                        android:background="#DBDEDC" />
+
+                    <TextView
+                        android:id="@+id/tvDailySessionsz"
+                        style="@style/TopHeading"
+                        android:layout_below="@+id/viewLine"
+                        android:layout_marginStart="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:drawablePadding="@dimen/dp_20"
+                        android:text="Daily Sessions"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/sp_18"
+                        app:drawableStartCompat="@drawable/ic_tick_pink" />
+
+                    <TextView
+                        style="@style/TopHeading"
+                        android:layout_below="@+id/tvDailySessionsz"
+                        android:layout_marginStart="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:drawablePadding="@dimen/dp_20"
+                        android:text="18rs/min"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/sp_18"
+                        app:drawableStartCompat="@drawable/ic_tick_pink" />
+
+                    <TextView
+                        android:id="@+id/tv18minz"
+                        style="@style/TopHeading"
+                        android:layout_below="@+id/tvDailySessionsz"
+                        android:layout_marginStart="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:drawablePadding="@dimen/dp_20"
+                        android:text="18rs/min"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/sp_18"
+                        app:drawableStartCompat="@drawable/ic_tick_pink" />
+
+                    <TextView
+                        android:id="@+id/tvUpto1Callsz"
+                        style="@style/TopHeading"
+                        android:layout_below="@+id/tv18minz"
+                        android:layout_marginStart="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:drawablePadding="@dimen/dp_20"
+                        android:text="Upto 1 call/day"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/sp_18"
+                        app:drawableStartCompat="@drawable/ic_tick_pink" />
+
+                    <Button
+                        android:id="@+id/btnCheckout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvUpto1Callsz"
+                        android:layout_marginStart="@dimen/dp_24"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_24"
+                        android:layout_marginBottom="@dimen/dp_19"
+                        android:background="@drawable/rectangle_green_bg"
+                        android:drawablePadding="@dimen/dp_20"
+                        android:text="CHECKOUT"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_18"
+                        app:drawableStartCompat="@drawable/ic_tick_pink" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMonthlyPlan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:cardCornerRadius="@dimen/dp_8"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/monthlyPlan"
+                    style="@style/TextView_Filter"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_19"
+                    android:layout_marginBottom="@dimen/dp_19"
+                    android:text="MONTHLY PLAN: 1,799₹"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/down_arrow_monthly_plan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/sp_25"
+                    android:layout_marginEnd="@dimen/dp_22"
+                    android:src="@drawable/ic_downside_arrow" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/monthlyPlan"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/price_1799"
+                        style="@style/TopHeading"
+                        android:layout_marginStart="@dimen/dp_24"
+                        android:text="1,799₹"
+                        android:textColor="@color/Green"
+                        android:textSize="@dimen/sp_48" />
+
+                    <TextView
+                        style="@style/TopHeading"
+                        android:layout_above="@+id/viewLine2"
+                        android:layout_marginStart="@dimen/dp_39"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_toEndOf="@+id/price_1799"
+                        android:text="only"
+                        android:textColor="@color/Green"
+                        android:textSize="@dimen/sp_24" />
+
+                    <View
+                        android:id="@+id/viewLine2"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/price_1799"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:layout_marginTop="16sp"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:layout_marginBottom="@dimen/dp_11"
+                        android:background="#DBDEDC" />
+
+                    <TextView
+                        android:id="@+id/tvDailySessions1"
+                        style="@style/TopHeading"
+                        android:layout_below="@+id/viewLine2"
+                        android:layout_marginStart="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:drawablePadding="@dimen/dp_20"
+                        android:text="Daily Sessions"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/sp_18"
+                        app:drawableStartCompat="@drawable/ic_tick_pink" />
+
+                    <TextView
+                        android:id="@+id/tv16min"
+                        style="@style/TopHeading"
+                        android:layout_below="@+id/tvDailySessions1"
+                        android:layout_marginStart="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:drawablePadding="@dimen/dp_20"
+                        android:text="16rs/min"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/sp_18"
+                        app:drawableStartCompat="@drawable/ic_tick_pink" />
+
+                    <TextView
+                        android:id="@+id/tvUpto2Calls"
+                        style="@style/TopHeading"
+                        android:layout_below="@+id/tv16min"
+                        android:layout_marginStart="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:drawablePadding="@dimen/dp_20"
+                        android:text="Upto 2 call/day"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/sp_18"
+                        app:drawableStartCompat="@drawable/ic_tick_pink" />
+
+                    <Button
+                        android:id="@+id/btnCheckout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvUpto2Calls"
+                        android:layout_marginStart="@dimen/dp_24"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_24"
+                        android:layout_marginBottom="@dimen/dp_19"
+                        android:background="@drawable/rectangle_green_bg"
+                        android:drawablePadding="@dimen/dp_20"
+                        android:text="CHECKOUT"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_18"
+                        app:drawableStartCompat="@drawable/ic_tick_pink" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/YearlyPlan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            app:cardCornerRadius="@dimen/dp_8"
+            app:cardElevation="5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/yearlyPlan"
+                    style="@style/TextView_Filter"
+                    android:layout_marginStart="@dimen/dp_24"
+                    android:layout_marginTop="@dimen/dp_19"
+                    android:layout_marginBottom="@dimen/dp_19"
+                    android:text="Yearly PLAN: 9,999₹"
+                    android:textSize="@dimen/sp_18"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/down_arrow_yearly_plan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginTop="@dimen/sp_25"
+                    android:layout_marginEnd="@dimen/dp_22"
+                    android:src="@drawable/ic_downside_arrow" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/yearlyPlan"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/price_9999"
+                        style="@style/TopHeading"
+                        android:layout_marginStart="@dimen/dp_24"
+                        android:text="9,999₹"
+                        android:textColor="@color/Green"
+                        android:textSize="@dimen/sp_48" />
+
+                    <TextView
+                        style="@style/TopHeading"
+                        android:layout_above="@+id/viewLine3"
+                        android:layout_marginStart="@dimen/dp_39"
+                        android:layout_marginBottom="@dimen/dp_10"
+                        android:layout_toEndOf="@+id/price_9999"
+                        android:text="only"
+                        android:textColor="@color/Green"
+                        android:textSize="@dimen/sp_24" />
+
+                    <View
+                        android:id="@+id/viewLine3"
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_below="@id/price_9999"
+                        android:layout_marginStart="@dimen/dp_20"
+                        android:layout_marginTop="16sp"
+                        android:layout_marginEnd="@dimen/dp_20"
+                        android:layout_marginBottom="@dimen/dp_11"
+                        android:background="#DBDEDC" />
+
+                    <TextView
+                        android:id="@+id/tvDailySessions3"
+                        style="@style/TopHeading"
+                        android:layout_below="@+id/viewLine3"
+                        android:layout_marginStart="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:drawablePadding="@dimen/dp_20"
+                        android:text="Daily Sessions"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/sp_18"
+                        app:drawableStartCompat="@drawable/ic_tick_pink" />
+
+                    <TextView
+                        android:id="@+id/tv12min"
+                        style="@style/TopHeading"
+                        android:layout_below="@+id/tvDailySessions3"
+                        android:layout_marginStart="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:drawablePadding="@dimen/dp_20"
+                        android:text="12rs/min"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/sp_18"
+                        app:drawableStartCompat="@drawable/ic_tick_pink" />
+
+                    <TextView
+                        android:id="@+id/tvUpto5Calls"
+                        style="@style/TopHeading"
+                        android:layout_below="@+id/tv12min"
+                        android:layout_marginStart="@dimen/dp_28"
+                        android:layout_marginTop="@dimen/dp_16"
+                        android:drawablePadding="@dimen/dp_20"
+                        android:text="Upto 5 call/day"
+                        android:textColor="@color/text_secondary"
+                        android:textSize="@dimen/sp_18"
+                        app:drawableStartCompat="@drawable/ic_tick_pink" />
+
+                    <Button
+                        android:id="@+id/btnCheckout3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvUpto5Calls"
+                        android:layout_marginStart="@dimen/dp_24"
+                        android:layout_marginTop="@dimen/dp_20"
+                        android:layout_marginEnd="@dimen/dp_24"
+                        android:layout_marginBottom="@dimen/dp_19"
+                        android:background="@drawable/rectangle_green_bg"
+                        android:drawablePadding="@dimen/dp_20"
+                        android:text="CHECKOUT"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/sp_18"
+                        app:drawableStartCompat="@drawable/ic_tick_pink" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/Cancel"
+            style="@style/TopHeading"
+            android:layout_below="@+id/YearlyPlan"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="@dimen/dp_28"
+            android:layout_marginTop="@dimen/dp_40"
+            android:drawablePadding="@dimen/dp_20"
+            android:padding="@dimen/dp_20"
+            android:text="CANCEL"
+            android:textColor="@color/BNWBlack"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+</layout>

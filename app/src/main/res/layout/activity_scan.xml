@@ -29,15 +29,50 @@
         android:layout_marginTop="250dp"
         android:src="@drawable/ic_scan_area"/>
 
+    <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifScanBar"
+        android:visibility="gone"
+        android:src="@drawable/scan_bar"
+        android:layout_alignStart="@+id/ivIcScanArea"
+        android:layout_alignEnd="@+id/ivIcScanArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
     <TextView
         android:id="@+id/tvScanPlantName"
-        android:layout_width="wrap_content"
+        android:layout_width="80sp"
         android:layout_height="wrap_content"
         android:textSize="20sp"
+        android:fontFamily="@font/poppins"
         android:textColor="@color/main_dark_green"
         android:layout_alignStart="@+id/ivIcScanArea"
         android:layout_alignTop="@+id/ivIcScanArea"
-        android:layout_margin="50dp"/>
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="50dp"/>
+
+    <TextView
+        android:id="@+id/tvTapForMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap for more"
+        android:visibility="gone"
+        android:fontFamily="@font/poppins"
+        android:textColor="@color/main_dark_green"
+        android:textSize="12sp"
+        android:layout_toEndOf="@+id/tvScanPlantName"
+        android:layout_alignTop="@+id/ivIcScanArea"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="10dp"/>
+
+    <ImageView
+        android:id="@+id/ivTapForMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:src="@drawable/ic_tap_for_more"
+        android:layout_toEndOf="@+id/tvScanPlantName"
+        android:layout_below="@+id/tvTapForMore"
+        android:layout_marginStart="20dp"/>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fbCapturePlant"

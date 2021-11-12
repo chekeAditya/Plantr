@@ -16,8 +16,11 @@
     <color name="primary_green">#008080</color>
     <color name="orange">#FF9947</color>
     <color name="neutral_1">#FEE1C3</color>
+    <color name="grey">#B8BCB8</color>
     <color name="BNWDarkGrey">#909791</color>
     <color name="secondary_3">#43AB65</color>
+    <color name="colorItemLeft">#E6E4E4</color>
+    <color name="colorItemRight">#813fd7</color>
 
 
 
@@ -36,4 +39,5 @@
     <color name="main_head_text_green">#39463B</color>
     <color name="main_dark_green_bg">#97CBCB</color>
     <color name="main_orange_bg">#FFC495</color>
+    <color name="main_text_light">#909791</color>
 </resources>

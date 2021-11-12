@@ -14,6 +14,7 @@ import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import com.applicationPantr.plantr.R
 import com.applicationPantr.plantr.databinding.ActivityScanBinding
+import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.delay
@@ -25,6 +26,7 @@ import java.util.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
+@AndroidEntryPoint
 class ScanActivity : AppCompatActivity() {
 
     private lateinit var activityScanBinding: ActivityScanBinding
@@ -103,22 +105,35 @@ class ScanActivity : AppCompatActivity() {
             ContextCompat.getMainExecutor(this), object : ImageCapture.OnImageSavedCallback {
                 override fun onImageSaved(outputFileResults: ImageCapture.OutputFileResults) {
                     val savedUri = Uri.fromFile(photoFile)
-                    activityScanBinding.apply {
-                        cameraProvider.unbindAll()
-                        viewFinder.visibility = View.GONE
-                        ivScanPlant.apply {
-                            setImageURI(savedUri)
-                            visibility = View.VISIBLE
-                        }
-                        tvScanPlantName.text = "Plant Name"
-                    }
-                    showPlantDetails(savedUri)
+                    startPlantScanning(savedUri)
                 }
 
                 override fun onError(exception: ImageCaptureException) {
                 }
 
             })
+    }
+
+    private fun startPlantScanning(savedUri: Uri) {
+        activityScanBinding.apply {
+            gifScanBar.visibility = View.VISIBLE
+
+            CoroutineScope(Dispatchers.Main).launch {
+                delay(8000)
+                cameraProvider.unbindAll()
+                viewFinder.visibility = View.GONE
+                gifScanBar.visibility = View.GONE
+                ivScanPlant.apply {
+                    setImageURI(savedUri)
+                    visibility = View.VISIBLE
+                }
+                tvScanPlantName.text = "Plant Name"
+                tvTapForMore.visibility = View.VISIBLE
+                ivTapForMore.visibility = View.VISIBLE
+            }
+
+        }
+        showPlantDetails(savedUri)
     }
 
     fun showPlantDetails(plantImageUri: Uri){
