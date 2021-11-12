@@ -1,10 +1,10 @@
 package com.applicationPantr.plantr.ui.chat._chat
 
+import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -14,20 +14,16 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.applicationPantr.plantr.R
 import com.applicationPantr.plantr.adapters._ChatAdapter
-import com.applicationPantr.plantr.remote.RetrofitInstance
 import com.applicationPantr.plantr.remote.response.chatresponse.Chat
 import com.applicationPantr.plantr.remote.response.chatresponse.NotificationDataModel
 import com.applicationPantr.plantr.remote.response.chatresponse.PushNotification
 import com.applicationPantr.plantr.remote.response.chatresponse.User
+import com.applicationPantr.plantr.ui.home.HomeActivity
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
-import com.google.gson.Gson
 import kotlinx.android.synthetic.main.activity_chat.*
 import kotlinx.android.synthetic.main.activity_user.*
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 import java.io.Serializable
 import java.util.*
 import java.util.concurrent.TimeUnit
@@ -87,7 +83,7 @@ class ChatActivity : AppCompatActivity(), Serializable {
                     NotificationDataModel(userName!!, message),
                     topic
                 ).also {
-                    sendNotification(it)
+//                    sendNotification(it)
                 }
             }
         }
@@ -134,19 +130,19 @@ class ChatActivity : AppCompatActivity(), Serializable {
         })
     }
 
-    private fun sendNotification(notification: PushNotification) =
-        CoroutineScope(Dispatchers.IO).launch {
-            try {
-                val response = RetrofitInstance.api.postNotification(notification)
-                if (response.isSuccessful) {
-                    Log.d("TAG", "Response: ${Gson().toJson(response)}")
-                } else {
-                    Log.e("TAG", response.errorBody()!!.string())
-                }
-            } catch (e: Exception) {
-                Log.e("TAG", e.toString())
-            }
-        }
+//    private fun sendNotification(notification: PushNotification) =
+//        CoroutineScope(Dispatchers.IO).launch {
+//            try {
+//                val response = RetrofitInstance.api.postNotification(notification)
+//                if (response.isSuccessful) {
+//                    Log.d("TAG", "Response: ${Gson().toJson(response)}")
+//                } else {
+//                    Log.e("TAG", response.errorBody()!!.string())
+//                }
+//            } catch (e: Exception) {
+//                Log.e("TAG", e.toString())
+//            }
+//        }
 
     private fun showAlertBox() {
         val builder = AlertDialog.Builder(this)
@@ -198,11 +194,12 @@ class ChatActivity : AppCompatActivity(), Serializable {
         alertDialog.window!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         alertDialog.window!!.setGravity(Gravity.BOTTOM)
         view.findViewById<View>(R.id.btnJoinPlans).setOnClickListener {
-            //go to getPlans Ad
+            //go to getPlans Ad      
         }
         view.findViewById<View>(R.id.btnExit)
             .setOnClickListener {
-//go to home activity
+                val intent = Intent(this@ChatActivity, HomeActivity::class.java)
+                startActivity(intent)
             }
     }
 }

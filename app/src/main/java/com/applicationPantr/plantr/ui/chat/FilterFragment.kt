@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.fragment_filter.*
 @AndroidEntryPoint
 class FilterFragment : Fragment(R.layout.fragment_filter) {
 
-    val args1: FilterFragmentArgs by navArgs()
+//    val args1: FilterFragmentArgs by navArgs()
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

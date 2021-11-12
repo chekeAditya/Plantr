@@ -59,7 +59,7 @@ class Log_In : Fragment(R.layout.fragment_log_in) {
                         context,
                         "Login successful!!" + mAuth.currentUser!!.email, Toast.LENGTH_LONG
                     ).show()
-                    val notificationIntent = Intent(activity, UserActivity::class.java)
+                    val notificationIntent = Intent(activity, HomeActivity::class.java)
                     startActivity(notificationIntent)
 
                 } else {
