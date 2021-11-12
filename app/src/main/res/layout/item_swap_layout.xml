@@ -16,11 +16,12 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvPlant"
-            android:layout_width="wrap_content"
+            android:layout_width="200sp"
             android:layout_height="140sp"
             app:cardCornerRadius="8dp">
 
             <ImageView
+                android:id="@+id/ivPlantImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"

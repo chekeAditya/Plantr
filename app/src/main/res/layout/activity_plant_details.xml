@@ -50,7 +50,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="10dp"
-                        android:text="Plant Name"
+                        android:text="Ficus Retusa"
                         android:fontFamily="@font/poppins"
                         android:textColor="@color/main_head_text_green"
                         android:textSize="20sp" />
@@ -60,9 +60,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:text="Name"
-                        android:fontFamily="@font/poppins"
-                        android:textSize="17sp" />
+                        android:text="Bonsai ficus"
+                        android:fontFamily="@font/poppins" />
 
                     <TextView
                         android:id="@+id/tvPlantDetails"
