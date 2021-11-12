@@ -32,8 +32,38 @@ class GetPlanFragment2 : Fragment() {
             downArrowWeeklyPlan.setOnClickListener {
                 rlWeeklyPlan.visibility = View.VISIBLE
                 downArrowWeeklyPlan.setImageResource(R.drawable.ic_upside_arrow)
+                rlMonthlyPlan.visibility = View.GONE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_downside_arrow)
+                rlYearlyPlan.visibility = View.GONE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_downside_arrow)
             }
 
+            downArrowMonthlyPlan.setOnClickListener {
+                rlMonthlyPlan.visibility = View.VISIBLE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_upside_arrow)
+                rlWeeklyPlan.visibility = View.GONE
+                downArrowWeeklyPlan.setImageResource(R.drawable.ic_downside_arrow)
+                rlYearlyPlan.visibility = View.GONE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_downside_arrow)
+            }
+
+            downArrowYearlyPlan.setOnClickListener {
+                rlYearlyPlan.visibility = View.VISIBLE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_upside_arrow)
+                rlWeeklyPlan.visibility = View.GONE
+                downArrowWeeklyPlan.setImageResource(R.drawable.ic_downside_arrow)
+                rlMonthlyPlan.visibility = View.GONE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_downside_arrow)
+            }
+
+            btnCancel.setOnClickListener {
+                rlYearlyPlan.visibility = View.GONE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_downside_arrow)
+                rlWeeklyPlan.visibility = View.GONE
+                downArrowWeeklyPlan.setImageResource(R.drawable.ic_downside_arrow)
+                rlMonthlyPlan.visibility = View.GONE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_downside_arrow)
+            }
         }
     }
 

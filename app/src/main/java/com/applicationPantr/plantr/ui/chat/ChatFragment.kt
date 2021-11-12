@@ -21,7 +21,7 @@ import com.google.android.material.bottomsheet.BottomSheetDialog
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
-class ChatFragment : Fragment(R.layout.fragment_chat), OnChatClicked {
+class ChatFragment : Fragment(), OnChatClicked {
 
     private lateinit var bottomSheetBinding: BottomSheetChatFargmentBinding
     lateinit var chatAdapter: ChatAdapter
@@ -46,6 +46,7 @@ class ChatFragment : Fragment(R.layout.fragment_chat), OnChatClicked {
         chatViewModel.getDataFromApi().observe(viewLifecycleOwner, Observer {
             expertList.clear()
             expertList.addAll(it)
+
             chatAdapter.notifyDataSetChanged()
         })
 
@@ -83,7 +84,6 @@ class ChatFragment : Fragment(R.layout.fragment_chat), OnChatClicked {
 
     override fun onClicked(expert: Expert) {
         val action = ChatFragmentDirections.actionChatFragmentToChatDetailsFragment(expert)
-
         Navigation.findNavController(requireView()).navigate(action)
     }
 

@@ -8,6 +8,7 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.navArgs
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.applicationPantr.plantr.R
@@ -26,7 +27,7 @@ import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_chat_details.*
 
 @AndroidEntryPoint
-class ChatDetailsFragment : Fragment(R.layout.fragment_chat_details) {
+class ChatDetailsFragment : Fragment() {
     //client
     lateinit var clientBinding: ItemClientReviewsBinding
     lateinit var clientAdapter: ClientAdapter
@@ -63,16 +64,19 @@ class ChatDetailsFragment : Fragment(R.layout.fragment_chat_details) {
         super.onViewCreated(view, savedInstanceState)
         settingUpData()
         settingUpGallery()
-//        settingUpMoreExperts()
+        settingUpMoreExperts()
         settingUpClient()
 
         chatViewModel.getDataFromApi().observe(viewLifecycleOwner, Observer {
             expertList.clear()
             expertList.addAll(it)
             galleryAdapter.notifyDataSetChanged()
-//            moreExpertAdapter.notifyDataSetChanged()
+            moreExpertAdapter.notifyDataSetChanged()
         })
 
+        chatDetailBinding.btnCheckPlans.setOnClickListener{
+            Navigation.findNavController(requireView()).navigate(R.id.action_chatDetailsFragment_to_getPlanFragment)
+        }
     }
 
     private fun settingUpClient() {
@@ -88,19 +92,21 @@ class ChatDetailsFragment : Fragment(R.layout.fragment_chat_details) {
         moreExpertBinding = ItemMoreExpertBinding.inflate(layoutInflater)
         moreExpertAdapter = MoreExpertAdapter(expertList)
         moreExpertBinding.apply {
-            recyclerviewGallery.layoutManager = LinearLayoutManager(context)
-            recyclerviewGallery.adapter = moreExpertAdapter
+            recyclerViewMoreExpert.layoutManager = LinearLayoutManager(context)
+            recyclerViewMoreExpert.adapter = moreExpertAdapter
         }
     }
 
     private fun settingUpGallery() {
         galleryBinding = ItemGalleryBinding.inflate(layoutInflater)
         galleryAdapter = GalleryAdapter(expertList)
-        galleryBinding.apply {
-            recyclerviewGallery.layoutManager = LinearLayoutManager(
-                context, LinearLayoutManager.HORIZONTAL, false
-            )
-            recyclerviewGallery.adapter = galleryAdapter
+        for (i in 0..5) {
+            galleryBinding.apply {
+                recyclerviewGallery.layoutManager = LinearLayoutManager(
+                    context, LinearLayoutManager.HORIZONTAL, false
+                )
+                recyclerviewGallery.adapter = galleryAdapter
+            }
         }
     }
 

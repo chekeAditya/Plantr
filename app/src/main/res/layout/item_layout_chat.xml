@@ -2,6 +2,7 @@
 <layout>
 
     <data>
+
         <variable
             name="expertsResponse"
             type="com.applicationPantr.plantr.remote.response.responseModel.Expert" />
@@ -12,19 +13,17 @@
             type="com.applicationPantr.plantr.remote.interfaces.OnChatClicked" />
     </data>
 
-    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:layout_width="200dp"
-        android:layout_marginEnd="@dimen/dp_15"
-        android:layout_marginTop="@dimen/dp_16"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_16"
+        android:layout_margin="@dimen/dp_8"
         app:cardCornerRadius="@dimen/dp_8"
         app:cardElevation="@dimen/dp_5">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/cvImage"
@@ -77,7 +76,7 @@
 
             <Button
                 android:id="@+id/btn_chat"
-                android:layout_width="match_parent"
+                android:layout_width="140dp"
                 android:layout_height="36dp"
                 android:layout_below="@+id/expert_charges"
                 android:layout_marginStart="@dimen/dp_19"
@@ -86,12 +85,14 @@
                 android:layout_marginBottom="@dimen/dp_16"
                 android:background="@drawable/rectangulate_button"
                 android:onClick="@{() ->onClickedChat.onClicked(expertsResponse)}"
+                android:paddingStart="@dimen/sp_20"
+                android:paddingEnd="@dimen/sp_20"
                 android:text="CHAT"
-                android:textSize="18sp"
-                android:textColor="@color/primary_green" />
+                android:textColor="@color/primary_green"
+                android:textSize="18sp" />
 
         </RelativeLayout>
 
-    </androidx.cardview.widget.CardView>
+    </com.google.android.material.card.MaterialCardView>
 
 </layout>

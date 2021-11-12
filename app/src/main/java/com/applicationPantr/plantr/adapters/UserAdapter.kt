@@ -5,8 +5,10 @@ import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.RecyclerView
 import com.applicationPantr.plantr.R
 import com.applicationPantr.plantr.remote.response.chatresponse.User
@@ -38,13 +40,19 @@ class UserAdapter(
             intent.putExtra("userName",user.userName)
             context.startActivity(intent)
         }
+
+        holder.btnChat.setOnClickListener {
+            val intent = Intent(context,ChatActivity::class.java)
+            intent.putExtra("userId",user.userId)
+            intent.putExtra("userName",user.userName)
+            context.startActivity(intent)
+        }
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
         val txtUserName:TextView = view.findViewById(R.id.userName)
-        val txtTemp:TextView = view.findViewById(R.id.temp)
         val imgUser:CircleImageView = view.findViewById(R.id.userImage)
-        val layoutUser:LinearLayout = view.findViewById(R.id.layoutUser)
+        val layoutUser:CardView = view.findViewById(R.id.layoutUser)
+        val btnChat:Button = view.findViewById(R.id.btn_chat)
     }
 }

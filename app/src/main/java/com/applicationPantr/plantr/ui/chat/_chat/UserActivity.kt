@@ -1,11 +1,10 @@
 package com.applicationPantr.plantr.ui.chat._chat
 
 import android.content.Context
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.GridLayoutManager
 import com.applicationPantr.plantr.R
 import com.applicationPantr.plantr.adapters.UserAdapter
 import com.applicationPantr.plantr.remote.firebase.FirebaseService
@@ -16,8 +15,9 @@ import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.*
 import com.google.firebase.messaging.FirebaseMessaging
 import kotlinx.android.synthetic.main.activity_user.*
+import java.io.Serializable
 
-class UserActivity : AppCompatActivity() {
+class UserActivity : AppCompatActivity(), Serializable {
 
 
     var userList = ArrayList<User>()
@@ -29,7 +29,8 @@ class UserActivity : AppCompatActivity() {
         FirebaseService.sharedPref = getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
 
 
-        userRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
+        userRecyclerView.layoutManager =
+            GridLayoutManager(this, 2)
 
         imgBack.setOnClickListener {
             onBackPressed()

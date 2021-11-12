@@ -21,9 +21,6 @@
         <action
             android:id="@+id/action_chatFragment_to_chatDetailsFragment"
             app:destination="@id/chatDetailsFragment" />
-        <action
-            android:id="@+id/action_chatFragment_to_getPlanFragment2"
-            app:destination="@id/getPlanFragment2" />
     </fragment>
     <fragment
         android:id="@+id/swapFragment"
@@ -52,10 +49,30 @@
         <argument
             android:name="expert"
             app:argType="com.applicationPantr.plantr.remote.response.responseModel.Expert" />
+        <action
+            android:id="@+id/action_chatDetailsFragment_to_getPlanFragment"
+            app:destination="@id/getPlanFragment" />
     </fragment>
     <fragment
         android:id="@+id/getPlanFragment2"
         android:name="com.applicationPantr.plantr.ui.chat.GetPlanFragment2"
-        android:label="GetPlanFragment2" />
+        android:label="GetPlanFragment2"
+        tools:layout="@layout/fragment_get_plan_2"/>
+    <fragment
+        android:id="@+id/getPlanFragment"
+        android:name="com.applicationPantr.plantr.ui.chat.GetPlanFragment"
+        android:label="GetPlanFragment"
+        tools:layout="@layout/fragment_get_plan">
+        <action
+            android:id="@+id/action_getPlanFragment_to_getPlanFragment2"
+            app:destination="@id/getPlanFragment2" />
+        <action
+            android:id="@+id/action_getPlanFragment_to_userActivity2"
+            app:destination="@id/userActivity2" />
+    </fragment>
+    <activity
+        android:id="@+id/userActivity2"
+        android:name="com.applicationPantr.plantr.ui.chat._chat.UserActivity"
+        android:label="UserActivity" />
 
 </navigation>

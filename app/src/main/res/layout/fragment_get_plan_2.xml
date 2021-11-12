@@ -191,6 +191,7 @@
                     android:src="@drawable/ic_downside_arrow" />
 
                 <RelativeLayout
+                    android:id="@+id/rlMonthlyPlan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/monthlyPlan"
@@ -317,6 +318,7 @@
                     android:src="@drawable/ic_downside_arrow" />
 
                 <RelativeLayout
+                    android:id="@+id/rlYearlyPlan"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/yearlyPlan"
@@ -410,11 +412,9 @@
         </androidx.cardview.widget.CardView>
 
         <TextView
-            android:id="@+id/Cancel"
+            android:id="@+id/btnCancel"
             style="@style/TopHeading"
-            android:layout_below="@+id/YearlyPlan"
             android:layout_gravity="center_horizontal"
-            android:layout_marginStart="@dimen/dp_28"
             android:layout_marginTop="@dimen/dp_40"
             android:drawablePadding="@dimen/dp_20"
             android:padding="@dimen/dp_20"
