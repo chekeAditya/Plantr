@@ -16,7 +16,7 @@ class FilterFragment : Fragment(R.layout.fragment_filter) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        tvPriceRange.text = args1.expertData.name
+//        tvPriceRange.text = args1.expertData.name
     }
 
 }
