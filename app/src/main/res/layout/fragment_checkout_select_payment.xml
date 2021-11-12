@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main_light_green"
+    tools:context=".ui.checkoutFlow.CheckoutSelectPaymentFragment">
+
+    <View
+        android:id="@+id/vTopCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="170dp"
+        android:background="@color/main_dark_green"/>
+
+    <ImageView
+        android:id="@+id/ivBackCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_back_white"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="40dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CHECKOUT"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvPlanDetailsCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="10dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginHorizontal="20dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="15dp">
+
+        <TextView
+            android:id="@+id/tvPlanCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WEEKLY PLAN"
+            android:textColor="@color/main_head_text_green"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tvSubTotalTextCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sub Total"
+            android:layout_below="@+id/tvPlanCheckout"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tvSubTotalCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="640 Rs"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tvPlanCheckout"
+            android:layout_marginTop="20dp"/>
+
+        <TextView
+            android:id="@+id/tvTaxesTextCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Taxes &amp; Fees"
+            android:layout_below="@id/tvSubTotalTextCheckout"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tvTaxesCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="60.26 Rs"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tvSubTotalCheckout"
+            android:layout_marginTop="10dp"/>
+
+        <View
+            android:id="@+id/vBelowTaxesCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/main_text_light"
+            android:layout_below="@+id/tvTaxesTextCheckout"
+            android:layout_marginTop="10dp"/>
+
+        <TextView
+            android:id="@+id/tvTotalTextCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TOTAL"
+            android:textColor="@color/main_head_text_green"
+            android:textSize="13sp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/vBelowTaxesCheckout"/>
+
+        <TextView
+            android:id="@+id/tvTotalCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="700.26 Rs"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/vBelowTaxesCheckout"
+            android:layout_marginTop="10dp"/>
+
+    </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/tvPayMethodTextCheckout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PAYMENT METHOD"
+        android:textColor="@color/main_head_text_green"
+        android:textSize="15sp"
+        android:layout_below="@+id/cvPlanDetailsCheckout"
+        android:layout_margin="20dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvPayMethodCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginHorizontal="20dp"
+        tools:listitem="@layout/item_pay_method_checkout"
+        android:layout_below="@+id/tvPayMethodTextCheckout"
+        android:layout_marginBottom="80dp"/>
+
+    <androidx.cardview.widget.CardView
+        android:visibility="gone"
+        android:id="@+id/cvPayMethodVerifyCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/tvPayMethodTextCheckout"
+        app:cardElevation="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/etEnterPayMethodCheckout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Enter mobile number or UPI id"
+            android:textSize="12sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="15dp"
+            android:maxLength="30"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvVerifyBtnCheckout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="@color/main_orange"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            app:cardCornerRadius="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VERIFY"
+                android:textColor="@color/white"
+                android:paddingHorizontal="40dp"
+                android:paddingVertical="10dp"
+                android:textSize="15sp"/>
+
+        </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvNextBtnCheckout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        app:cardBackgroundColor="@color/main_dark_green"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="8dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="NEXT"
+            android:textSize="15sp"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:padding="10dp"/>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
