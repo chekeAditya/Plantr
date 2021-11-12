@@ -6,16 +6,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.applicationPantr.plantr.R
 import kotlinx.android.synthetic.main.item_client_testimonial.view.*
-import kotlinx.android.synthetic.main.slider_container.view.*
 
 class TestimonialAdapter(private val TestimonialSlider: List<Testimonials>):
     RecyclerView.Adapter<TestimonialAdapter.TestViewHolder>() {
     inner class TestViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val textTittles = view.tvClientName
+        private val textTittles = view.ClientName
         private val description=view.Descr
         private val rating=view.expert_Rating
-        private val quama = view.doubleCommas
-        private val image=view.ciClientImage
+        private val quama = view.punctuation
+        private val image=view.ClientImage
         fun bind(testSlider: Testimonials) {
             textTittles.text=testSlider.names
             description.text=testSlider.HeadingTwo

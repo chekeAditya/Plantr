@@ -43,21 +43,21 @@ TestimonialSlider()
 
         listOf(
             Testimonials(
-                "Aditya CHeke",
+                "Riya Mishra",
                 R.drawable.sumit,
                 R.drawable.ic_rating,
                 R.drawable.ic_double_commas,
                 "very nice plant i lke it sooo much"
             ),
             Testimonials(
-                "Aditya CHeke",
-                R.drawable.sumit,
+                "Prachi Pardeshi",
+                R.drawable.prachi,
                 R.drawable.ic_rating,
                 R.drawable.ic_double_commas,
                 "very nice plant i lke it sooo much"
             ),
             Testimonials(
-                "Aditya CHeke",
+                "Aditya Cheke",
                 R.drawable.sumit,
                 R.drawable.ic_rating,
                 R.drawable.ic_double_commas,
