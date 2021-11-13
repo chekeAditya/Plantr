@@ -37,48 +37,54 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/rectanglewhite"
-        app:cardCornerRadius="8dp"
-        android:elevation="@dimen/dp_5"
         android:layout_marginStart="@dimen/dp_16"
+        android:layout_marginTop="144dp"
         android:layout_marginEnd="@dimen/dp_16"
-        android:layout_marginTop="144dp">
-<RelativeLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+        android:background="@drawable/rectanglewhite"
+        android:elevation="@dimen/dp_5"
+        app:cardCornerRadius="8dp">
 
-    <TextView
-        android:id="@+id/tvEnter"
-        android:fontFamily="@font/poppins"
-        android:textColor="@color/BNWBlack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/dp_16"
-        android:layout_marginTop="@dimen/dp_16"
-        android:layout_marginBottom="42dp"
-        android:text="Enter UPI Pin" />
-  <ImageView
-      android:src="@drawable/ic_visible"
-      android:layout_width="wrap_content"
-      android:layout_alignParentEnd="true"
-      android:layout_margin="@dimen/dp_23"
-      android:layout_height="wrap_content"/>
-    <com.goodiebag.pinview.Pinview
-        android:layout_width="match_parent"
-        android:layout_below="@id/tvEnter"
-        app:pinWidth="@dimen/dp_48"
-        app:pinHeight="56dp"
-        app:pinLength="5"
-        app:inputType="number"
-        android:layout_marginBottom="32dp"
-        android:layout_height="wrap_content"/>
-</RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tvEnter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:layout_marginBottom="42dp"
+                android:fontFamily="@font/poppins"
+                android:text="Enter UPI Pin"
+                android:textColor="@color/BNWBlack" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_margin="@dimen/dp_23"
+                android:src="@drawable/ic_visible" />
+
+            <com.goodiebag.pinview.Pinview
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvEnter"
+                android:layout_marginBottom="32dp"
+                app:inputType="number"
+                app:pinHeight="56dp"
+                app:pinLength="5"
+                app:pinWidth="@dimen/dp_48" />
+        </RelativeLayout>
+
+
     </androidx.cardview.widget.CardView>
-<ImageView
-    android:id="@+id/btn_payNext"
-    android:layout_width="match_parent"
-    android:src="@drawable/buttons_next"
-    android:layout_alignParentBottom="true"
-    android:layout_height="wrap_content"/>
+
+    <ImageView
+        android:id="@+id/btn_payNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/buttons_next" />
 
 </RelativeLayout>

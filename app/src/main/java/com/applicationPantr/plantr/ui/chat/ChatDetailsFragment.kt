@@ -91,9 +91,11 @@ class ChatDetailsFragment : Fragment() {
     private fun settingUpMoreExperts() {
         moreExpertBinding = ItemMoreExpertBinding.inflate(layoutInflater)
         moreExpertAdapter = MoreExpertAdapter(expertList)
-        moreExpertBinding.apply {
-            recyclerViewMoreExpert.layoutManager = LinearLayoutManager(context)
-            recyclerViewMoreExpert.adapter = moreExpertAdapter
+        for (i in 7 until expertList.size-1) {
+            moreExpertBinding.apply {
+                recyclerViewMoreExpert.layoutManager = LinearLayoutManager(context)
+                recyclerViewMoreExpert.adapter = moreExpertAdapter
+            }
         }
     }
 

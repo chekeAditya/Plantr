@@ -93,6 +93,7 @@
                     android:layout_height="wrap_content"
                     android:textAlignment="textStart"
                     app:tabIndicatorColor="#39463B"
+
                     app:tabSelectedTextColor="#39463B"
                     app:tabTextAppearance="@style/TabLayout"
                     app:tabTextColor="#39463B" />
