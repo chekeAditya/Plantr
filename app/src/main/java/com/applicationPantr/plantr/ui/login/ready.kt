@@ -13,7 +13,7 @@ class ready : AppCompatActivity() {
         setContentView(R.layout.activity_ready)
         Handler().postDelayed(Runnable { //This method will be executed once the timer is over
             // Start your app main activity
-            val i = Intent(this,Permission::class.java)
+            val i = Intent(this,permissionRequest::class.java)
             startActivity(i)
             // close this activity
             finish()

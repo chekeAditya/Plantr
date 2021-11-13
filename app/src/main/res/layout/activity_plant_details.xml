@@ -61,6 +61,7 @@
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:text="Bonsai ficus"
+                        android:textSize="@dimen/sp_12"
                         android:fontFamily="@font/poppins" />
 
                     <TextView
@@ -68,6 +69,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_margin="15dp"
+                        android:textSize="@dimen/sp_12"
                         android:justificationMode="inter_word"
                         android:fontFamily="@font/poppins"
                         android:text="Ficus retusa is a rapidly growing, rounded, broad-headed, evergreen shrub or tree that can reach 10 metres (33 ft) in height[5] with an equal spread. The smooth, light grey trunk is quite striking, can grow to around 1 metre (3.3 ft) in diameter, and it firmly supports the smooth, light grey" />

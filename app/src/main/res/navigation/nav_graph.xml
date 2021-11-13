@@ -86,5 +86,14 @@
         android:name="com.applicationPantr.plantr.ui.checkoutFlow.CheckoutSelectPaymentFragment"
         android:label="fragment_checkout_select_payment"
         tools:layout="@layout/fragment_checkout_select_payment" />
+    <fragment
+        android:id="@+id/paymentProcessingFragment"
+        android:name="com.applicationPantr.plantr.ui.checkoutFlow.PaymentProcessingFragment"
+        android:label="fragment_payment_processing"
+        tools:layout="@layout/fragment_payment_processing" >
+        <action
+            android:id="@+id/action_paymentProcessingFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
 
 </navigation>

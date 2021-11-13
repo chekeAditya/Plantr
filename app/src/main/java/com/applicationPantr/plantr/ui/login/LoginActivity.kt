@@ -10,6 +10,7 @@ import com.google.android.material.tabs.TabLayout
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.view.*
 import android.content.Intent
+import androidx.core.content.ContextCompat
 import com.google.firebase.auth.FirebaseAuth
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.fragment_log_in.*
@@ -26,6 +27,8 @@ private lateinit var mAuth :FirebaseAuth
         SwitchTab()
         facebookAuthentication()
         googleAuthentication()
+        tab_login.setSelectedTabIndicatorColor(ContextCompat.getColor(this, R.color.BNWBlack));
+
     }
 
     private fun SwitchTab() {
@@ -36,6 +39,7 @@ private lateinit var mAuth :FirebaseAuth
         logInAdapter.addFragment(Log_In(), "Log-In")
         viewpagerLogin.adapter = logInAdapter
         tablayoutLog_In.setupWithViewPager(viewPager)
+
 
 
         tablayoutLog_In.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {

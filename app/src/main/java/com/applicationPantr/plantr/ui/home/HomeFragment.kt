@@ -74,25 +74,24 @@ class HomeFragment : Fragment(R.layout.fragment_home),OnChatClicked{
 
         listOf(
             Testimonials(
-                "Riya Mishra",
-                R.drawable.sumit,
+                "Riya Mishra", R.drawable.sumit,
                 R.drawable.ic_rating,
                 R.drawable.ic_double_commas,
-                "very nice plant i lke it sooo much"
+                "Great Place to get information about planting. easy to use. very happy with my app"
             ),
             Testimonials(
-                "Prachi Pardeshi",
-                R.drawable.prachi,
+                "Shubham Kumar",
+                R.drawable.johndeep,
                 R.drawable.ic_rating,
                 R.drawable.ic_double_commas,
-                "very nice plant i lke it sooo much"
+                "Expert chat is my favourite feature as expert resolve all your doubts. experts are very friendly."
             ),
             Testimonials(
-                "Aditya Cheke",
-                R.drawable.sumit,
+                "Sonu Kumar",
+                R.drawable.gopal,
                 R.drawable.ic_rating,
                 R.drawable.ic_double_commas,
-                "very nice plant i lke it sooo much"
+                "Scanning feature uis great whenever I like some plants and I don't know the name i just scan it "
             )
 
         )
@@ -103,6 +102,10 @@ class HomeFragment : Fragment(R.layout.fragment_home),OnChatClicked{
     }
 
     override fun onBlogClicked(blog: Blog) {
+
+    }
+
+    override fun onClickApply(list: List<Expert>) {
 
     }
 }

@@ -4,6 +4,9 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.CompoundButton
+import android.widget.RadioGroup
+import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -22,6 +25,14 @@ import com.applicationPantr.plantr.remote.response.responseModel.Expert
 import com.applicationPantr.plantr.viewmodels.ChatViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.android.synthetic.main.bottom_sheet_chat_fargment.*
+import kotlinx.android.synthetic.main.bottom_sheet_chat_fargment.view.*
+import kotlinx.android.synthetic.main.bottom_sheet_chat_fargment.view.rb_ActiveNow
+import kotlinx.android.synthetic.main.bottom_sheet_chat_fargment.view.rb_BestMatches
+import kotlinx.android.synthetic.main.bottom_sheet_chat_fargment.view.rb_HighToLow
+import kotlinx.android.synthetic.main.bottom_sheet_chat_fargment.view.rb_LowToHigh
+import kotlinx.android.synthetic.main.bottom_sheet_chat_fargment.view.rb_TopExpert
+import kotlinx.android.synthetic.main.bottom_sheet_chat_fargment.view.tvLowToHigh
 
 @AndroidEntryPoint
 class ChatFragment : Fragment(), OnChatClicked {
@@ -32,6 +43,7 @@ class ChatFragment : Fragment(), OnChatClicked {
     var expertList = mutableListOf<Expert>()
     lateinit var charFragmentChatBinding: FragmentChatBinding
     private val chatViewModel: ChatViewModel by viewModels()
+    private val bottomDialog = ChatBottomSheetFragment(this)
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -86,15 +98,7 @@ class ChatFragment : Fragment(), OnChatClicked {
 
 
     private fun openSortBottomSheet() {
-        bottomSheetBinding = BottomSheetChatFargmentBinding.inflate(layoutInflater)
-        val bottomDialog = BottomSheetDialog(
-            requireContext(), R.style.BottomSheetDialogTheme
-        )
-        val bottomSheetView = LayoutInflater.from(requireContext()).inflate(
-            R.layout.bottom_sheet_chat_fargment, bottomSheetBinding.cvBottomSheet
-        )
-        bottomDialog.setContentView(bottomSheetView)
-        bottomDialog.show()
+        bottomDialog.show(childFragmentManager,"ChatBottomDialog")
     }
 
     override fun onClicked(expert: Expert) {
@@ -103,7 +107,15 @@ class ChatFragment : Fragment(), OnChatClicked {
     }
 
     override fun onBlogClicked(blog: Blog) {
-        TODO("Not yet implemented")
+    }
+
+    override fun onClickApply(list: List<Expert>) {
+        bottomDialog.dismiss()
+        if (list.isNotEmpty()) {
+            expertList.clear()
+            expertList.addAll(list)
+            chatAdapter.notifyDataSetChanged()
+        }
     }
 
     override fun onDestroy() {
