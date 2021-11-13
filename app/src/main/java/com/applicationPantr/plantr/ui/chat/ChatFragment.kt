@@ -17,6 +17,7 @@ import com.applicationPantr.plantr.databinding.BottomSheetChatFargmentBinding
 import com.applicationPantr.plantr.databinding.FragmentChatBinding
 import com.applicationPantr.plantr.extras.ChatFilterList
 import com.applicationPantr.plantr.remote.interfaces.OnChatClicked
+import com.applicationPantr.plantr.remote.response.responseModel.Blog
 import com.applicationPantr.plantr.remote.response.responseModel.Expert
 import com.applicationPantr.plantr.viewmodels.ChatViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -99,6 +100,10 @@ class ChatFragment : Fragment(), OnChatClicked {
     override fun onClicked(expert: Expert) {
         action = ChatFragmentDirections.actionChatFragmentToChatDetailsFragment(expert)
         Navigation.findNavController(requireView()).navigate(action)
+    }
+
+    override fun onBlogClicked(blog: Blog) {
+        TODO("Not yet implemented")
     }
 
     override fun onDestroy() {
