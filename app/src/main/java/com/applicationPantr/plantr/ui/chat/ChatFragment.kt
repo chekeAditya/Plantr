@@ -110,8 +110,8 @@ class ChatFragment : Fragment(), OnChatClicked {
     }
 
     override fun onClickApply(list: List<Expert>) {
+        bottomDialog.dismiss()
         if (list.isNotEmpty()) {
-            bottomDialog.dismiss()
             expertList.clear()
             expertList.addAll(list)
             chatAdapter.notifyDataSetChanged()

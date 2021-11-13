@@ -33,6 +33,7 @@ class ChatBottomSheetFragment(private val onChatClicked: OnChatClicked)
 
         tvReset.setOnClickListener {
             resetAllFilter()
+            setApplySortBtn()
         }
 
         tvApply.setOnClickListener {
@@ -62,33 +63,39 @@ class ChatBottomSheetFragment(private val onChatClicked: OnChatClicked)
     }
 
     private fun sortListDesc(sortedList: MutableList<Expert>) {
-        for (i in 0 until ChatFilterList.originalList.size){
+        for (i in 0 until ChatFilterList.originalList.size-1){
             var price = ChatFilterList.originalList[i].avgCharges.substring(5,7).toInt()
-            var expert = ChatFilterList.originalList[i]
-            for (j in i until ChatFilterList.originalList.size){
+            var expert = i
+            for (j in i+1 until ChatFilterList.originalList.size){
                 var expertPrice = ChatFilterList.originalList[j].avgCharges.substring(5,7).toInt()
                 if (expertPrice > price){
                     price = expertPrice
-                    expert = ChatFilterList.originalList[j]
+                    expert = j
                 }
             }
-            sortedList.add(expert)
+            var temp = ChatFilterList.originalList[i]
+            ChatFilterList.originalList[i] = ChatFilterList.originalList[expert]
+            ChatFilterList.originalList[expert] = temp
         }
+        sortedList.addAll(ChatFilterList.originalList)
     }
 
     private fun sortListAsc(sortedList: MutableList<Expert>) {
-        for (i in 0 until ChatFilterList.originalList.size){
+        for (i in 0 until ChatFilterList.originalList.size-1){
             var price = ChatFilterList.originalList[i].avgCharges.substring(5,7).toInt()
-            var expert = ChatFilterList.originalList[i]
-            for (j in i until ChatFilterList.originalList.size){
+            var expert = i
+            for (j in i+1 until ChatFilterList.originalList.size){
                 var expertPrice = ChatFilterList.originalList[j].avgCharges.substring(5,7).toInt()
                 if (expertPrice < price){
                     price = expertPrice
-                    expert = ChatFilterList.originalList[j]
+                    expert = j
                 }
             }
-            sortedList.add(expert)
+            var temp = ChatFilterList.originalList[i]
+            ChatFilterList.originalList[i] = ChatFilterList.originalList[expert]
+            ChatFilterList.originalList[expert] = temp
         }
+        sortedList.addAll(ChatFilterList.originalList)
     }
 
     private fun filterChatList() {
@@ -138,6 +145,11 @@ class ChatBottomSheetFragment(private val onChatClicked: OnChatClicked)
                     .getColor(requireContext(), R.color.main_orange_bg)
             )
         }
+    }
+
+    override fun onStop() {
+        super.onStop()
+        resetAllFilter()
     }
 
 }
