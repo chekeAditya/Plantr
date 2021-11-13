@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import com.applicationPantr.plantr.R
 import com.applicationPantr.plantr.databinding.FragmentGetPlan2Binding
 
@@ -32,8 +33,50 @@ class GetPlanFragment2 : Fragment() {
             downArrowWeeklyPlan.setOnClickListener {
                 rlWeeklyPlan.visibility = View.VISIBLE
                 downArrowWeeklyPlan.setImageResource(R.drawable.ic_upside_arrow)
+                rlMonthlyPlan.visibility = View.GONE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_downside_arrow)
+                rlYearlyPlan.visibility = View.GONE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_downside_arrow)
             }
 
+            downArrowMonthlyPlan.setOnClickListener {
+                rlMonthlyPlan.visibility = View.VISIBLE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_upside_arrow)
+                rlWeeklyPlan.visibility = View.GONE
+                downArrowWeeklyPlan.setImageResource(R.drawable.ic_downside_arrow)
+                rlYearlyPlan.visibility = View.GONE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_downside_arrow)
+            }
+
+            downArrowYearlyPlan.setOnClickListener {
+                rlYearlyPlan.visibility = View.VISIBLE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_upside_arrow)
+                rlWeeklyPlan.visibility = View.GONE
+                downArrowWeeklyPlan.setImageResource(R.drawable.ic_downside_arrow)
+                rlMonthlyPlan.visibility = View.GONE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_downside_arrow)
+            }
+
+            btnCancel.setOnClickListener {
+                rlYearlyPlan.visibility = View.GONE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_downside_arrow)
+                rlWeeklyPlan.visibility = View.GONE
+                downArrowWeeklyPlan.setImageResource(R.drawable.ic_downside_arrow)
+                rlMonthlyPlan.visibility = View.GONE
+                downArrowMonthlyPlan.setImageResource(R.drawable.ic_downside_arrow)
+            }
+
+            btnCheckout.setOnClickListener {
+                Navigation.findNavController(it).navigate(R.id.action_getPlanFragment2_to_checkoutSelectPaymentFragment)
+            }
+
+            btnCheckout1.setOnClickListener {
+                Navigation.findNavController(it).navigate(R.id.action_getPlanFragment2_to_checkoutSelectPaymentFragment)
+            }
+
+            btnCheckout3.setOnClickListener {
+                Navigation.findNavController(it).navigate(R.id.action_getPlanFragment2_to_checkoutSelectPaymentFragment)
+            }
         }
     }
 

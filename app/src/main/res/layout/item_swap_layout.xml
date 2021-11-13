@@ -16,11 +16,12 @@
 
         <androidx.cardview.widget.CardView
             android:id="@+id/cvPlant"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="140sp"
             app:cardCornerRadius="8dp">
 
             <ImageView
+                android:id="@+id/ivPlantImage"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
@@ -33,17 +34,17 @@
             android:id="@+id/tvPlantA"
             android:layout_width="0sp"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/cvPlant"
             android:layout_alignStart="@+id/cvPlant"
             android:layout_alignEnd="@+id/cvPlant"
-            android:text="Plant A"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_swap_a_plant"
             android:fontFamily="@font/poppins"
             android:gravity="center"
-            android:textColor="@color/main_dark_green"
-            android:textSize="13sp"
-            android:background="@drawable/bg_swap_a_plant"
             android:padding="2dp"
-            android:layout_below="@+id/cvPlant"
-            android:layout_marginTop="5dp"/>
+            android:text="Plant A"
+            android:textColor="@color/main_dark_green"
+            android:textSize="13sp" />
 
         <ImageView
             android:layout_width="wrap_content"

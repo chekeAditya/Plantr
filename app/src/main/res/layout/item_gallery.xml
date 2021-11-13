@@ -21,6 +21,7 @@
             android:layout_height="match_parent">
 
             <ImageView
+                android:scaleType="centerCrop"
                 android:id="@+id/ivImage"
                 android:layout_width="200dp"
                 android:layout_height="@dimen/dp_127"

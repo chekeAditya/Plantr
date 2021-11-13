@@ -127,7 +127,7 @@ class ScanActivity : AppCompatActivity() {
                     setImageURI(savedUri)
                     visibility = View.VISIBLE
                 }
-                tvScanPlantName.text = "Plant Name"
+                tvScanPlantName.text = "Ficus Retusa"
                 tvTapForMore.visibility = View.VISIBLE
                 ivTapForMore.visibility = View.VISIBLE
             }

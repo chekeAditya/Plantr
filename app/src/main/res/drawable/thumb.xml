@@ -4,9 +4,8 @@
     <item android:state_checked="true">
         <shape android:shape="oval">
             <solid android:color="@color/secondary_3"/>
-            <stroke
-                android:width="1dp"
-                android:color="@color/white"/>
+            <stroke android:width="1dp"
+                android:color="#8c8c8c"/>
             <size android:width="@dimen/dp_26"
                 android:height="@dimen/dp_26"/>
         </shape>
@@ -15,9 +14,8 @@
     <item android:state_checked="false">
         <shape android:shape="oval">
             <solid android:color="@color/secondary_3"/>
-            <stroke
-                android:width="1dp"
-                android:color="@color/white"/>
+            <stroke android:width="1dp"
+                android:color="#8c8c8c"/>
             <size android:width="@dimen/dp_26"
                 android:height="@dimen/dp_26"/>
         </shape>

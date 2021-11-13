@@ -1,57 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="200dp"
     android:id="@+id/layoutUser"
-    android:layout_width="match_parent"
+    android:layout_margin="@dimen/dp_8"
     android:layout_height="wrap_content"
+    app:cardCornerRadius="@dimen/dp_16"
     android:orientation="vertical"
+    android:elevation="@dimen/dp_5"
     android:paddingTop="10dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
 
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:id="@+id/userImage"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="10dp"
-            android:src="@mipmap/ic_launcher"
-            app:civ_border_color="@color/colorPrimary"
-            app:civ_border_width="1dp" />
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content">
 
-            android:gravity="center"
-            android:orientation="vertical">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/userImage"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:src="@mipmap/ic_launcher"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="1dp" />
+
+
+            <ImageView
+                android:id="@+id/expert_Rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/userImage"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_11"
+                android:src="@drawable/ic_rating" />
 
             <TextView
                 android:id="@+id/userName"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins"
-                android:maxLines="1"
-                android:textSize="16sp"
-                tools:text="farhan" />
+                android:layout_below="@+id/expert_Rating"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/dp_11"
+                android:fontFamily="@font/poppins_medium"
+                android:text=""
+                android:textColor="@color/BNWBlack"
+                android:textSize="@dimen/sp_16" />
 
-            <TextView
-                android:id="@+id/temp"
+
+            <Button
+                android:id="@+id/btn_chat"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/poppins"
-                android:maxLines="1"
-                android:textSize="14sp"
-                tools:text="temp" />
+                android:layout_height="36dp"
+                android:layout_below="@+id/userName"
+                android:layout_marginStart="@dimen/dp_19"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginEnd="@dimen/dp_19"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:background="@drawable/rectangulate_button"
+                android:text="CHAT"
+                android:textColor="@color/primary_green"
+                android:textSize="18sp" />
 
-        </LinearLayout>
+        </RelativeLayout>
 
-
-    </LinearLayout>
-
-
-</LinearLayout>
+</androidx.cardview.widget.CardView>

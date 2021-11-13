@@ -33,7 +33,6 @@ class Sign_In : Fragment(R.layout.fragment_sign_in) {
             val notificationIntent = Intent(activity, HomeActivity::class.java)
             startActivity(notificationIntent)
         }
-
     }
 
     private fun registerNewUser() {
@@ -74,7 +73,7 @@ class Sign_In : Fragment(R.layout.fragment_sign_in) {
                             etNameSignIn.setText("")
                             etEmailSignIn.setText("")
                             etPasswordSignIn.setText("")
-                            var intent = Intent(context, UserActivity::class.java)
+                            var intent = Intent(context, HomeActivity::class.java)
                             startActivity(intent)
                             Toast.makeText(
                                 context,
