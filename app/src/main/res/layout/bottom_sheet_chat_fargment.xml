@@ -1,144 +1,142 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:app="http://schemas.android.com/apk/res-auto">
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvBottomSheet"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:elevation="@dimen/dp_12"
+    app:cardCornerRadius="@dimen/sp_20">
 
-    <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:id="@+id/cvBottomSheet"
-        android:elevation="@dimen/dp_12"
-        app:cardCornerRadius="@dimen/sp_20"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
-        <RelativeLayout
+
+        <ImageView
+            android:id="@+id/ivDownArrow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_23"
+            android:src="@drawable/ic_downside_arrow" />
+
+        <TextView
+            android:id="@+id/tvSort"
+            style="@style/TopHeading"
+            android:layout_below="@+id/ivDownArrow"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_22"
+            android:fontFamily="@font/poppins"
+            android:text="Sort"
+            android:textColor="@color/BNWBlack"
+            android:textSize="@dimen/sp_22"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/ivFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ivDownArrow"
+            android:layout_alignParentEnd="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_23"
+            android:layout_marginEnd="@dimen/sp_22"
+            android:src="@drawable/ic_sort" />
+
+        <View
+            android:id="@+id/ivLine"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="1dp"
+            android:layout_below="@+id/tvSort"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:background="#DBDEDC" />
+
+        <TextView
+            android:id="@+id/tvLowToHigh"
+            style="@style/TextViewBottonSheet"
+            android:layout_below="@+id/ivLine"
+            android:text="Price: Low to High" />
+
+        <TextView
+            android:id="@+id/tvHighToLow"
+            style="@style/TextViewBottonSheet"
+            android:layout_below="@+id/tvLowToHigh"
+            android:text="Price: High to Low" />
+
+        <TextView
+            android:id="@+id/tvActiveNow"
+            style="@style/TextViewBottonSheet"
+            android:layout_below="@+id/tvHighToLow"
+            android:text="Active Now" />
+
+        <TextView
+            android:id="@+id/tvTopExpert"
+            style="@style/TextViewBottonSheet"
+            android:layout_below="@+id/tvActiveNow"
+            android:text="Top Expert" />
+
+        <TextView
+            android:id="@+id/tvBestMatch"
+            style="@style/TextViewBottonSheet"
+            android:layout_below="@+id/tvTopExpert"
+            android:text="Best Match" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvBestMatch"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_38"
+            android:layout_marginEnd="@dimen/dp_16"
+            android:paddingBottom="@dimen/dp_28">
+
+            <Button
+                android:id="@+id/tvReset"
+                style="@style/ResetButton"
+                android:layout_weight="1.5"
+                android:background="@android:color/transparent"
+                android:text="RESET"
+                android:textSize="@dimen/sp_16" />
+
+            <Button
+                android:id="@+id/tvApply"
+                style="@style/ApplyButton"
+                android:layout_weight="1"
+                android:background="@drawable/is_selected_applybutton"
+                android:text="APPLY"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_16" />
+
+        </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/rb_LowToHigh"
+            style="@style/radioButton"
+            android:layout_below="@+id/ivLine" />
+
+        <CheckBox
+            android:id="@+id/rb_HighToLow"
+            style="@style/radioButton"
+            android:layout_below="@+id/rb_LowToHigh" />
+
+        <CheckBox
+            android:id="@+id/rb_ActiveNow"
+            style="@style/radioButton"
+            android:layout_below="@+id/rb_HighToLow" />
+
+        <CheckBox
+            android:id="@+id/rb_TopExpert"
+            style="@style/radioButton"
+            android:layout_below="@+id/rb_ActiveNow" />
+
+        <CheckBox
+            android:id="@+id/rb_BestMatches"
+            style="@style/radioButton"
+            android:layout_below="@+id/rb_TopExpert" />
+
+    </RelativeLayout>
 
 
-            <ImageView
-                android:id="@+id/ivDownArrow"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/dp_23"
-                android:src="@drawable/ic_downside_arrow" />
-
-            <TextView
-                android:id="@+id/tvSort"
-                style="@style/TopHeading"
-                android:layout_below="@+id/ivDownArrow"
-                android:layout_marginStart="@dimen/dp_16"
-                android:layout_marginTop="@dimen/dp_22"
-                android:fontFamily="@font/poppins"
-                android:text="Sort"
-                android:textStyle="bold"
-                android:textColor="@color/BNWBlack"
-                android:textSize="@dimen/sp_22" />
-
-            <ImageView
-                android:id="@+id/ivFilter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/ivDownArrow"
-                android:layout_alignParentEnd="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/dp_23"
-                android:layout_marginEnd="@dimen/sp_22"
-                android:src="@drawable/ic_sort" />
-
-            <View
-                android:id="@+id/ivLine"
-                android:layout_width="match_parent"
-                android:layout_height="1dp"
-                android:layout_below="@+id/tvSort"
-                android:layout_marginStart="@dimen/dp_16"
-                android:layout_marginTop="@dimen/dp_16"
-                android:layout_marginEnd="@dimen/dp_16"
-                android:background="#DBDEDC" />
-
-            <TextView
-                android:id="@+id/tvLowToHigh"
-                style="@style/TextViewBottonSheet"
-                android:layout_below="@+id/ivLine"
-                android:text="Price: Low to High" />
-
-            <TextView
-                android:id="@+id/tvHighToLow"
-                style="@style/TextViewBottonSheet"
-                android:layout_below="@+id/tvLowToHigh"
-                android:text="Price: High to Low" />
-
-            <TextView
-                android:id="@+id/tvActiveNow"
-                style="@style/TextViewBottonSheet"
-                android:layout_below="@+id/tvHighToLow"
-                android:text="Active Now" />
-
-            <TextView
-                android:id="@+id/tvTopExpert"
-                style="@style/TextViewBottonSheet"
-                android:layout_below="@+id/tvActiveNow"
-                android:text="Top Expert" />
-
-            <TextView
-                android:id="@+id/tvBestMatch"
-                style="@style/TextViewBottonSheet"
-                android:layout_below="@+id/tvTopExpert"
-                android:text="Best Match" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvBestMatch"
-                android:layout_marginStart="@dimen/dp_16"
-                android:layout_marginTop="@dimen/dp_38"
-                android:layout_marginEnd="@dimen/dp_16"
-                android:paddingBottom="@dimen/dp_28">
-
-                <Button
-                    android:id="@+id/tvReset"
-                    style="@style/ResetButton"
-                    android:layout_weight="1.5"
-                    android:background="@android:color/transparent"
-                    android:text="RESET"
-                    android:textSize="@dimen/sp_16" />
-
-                <Button
-                    android:id="@+id/tvApply"
-                    style="@style/ApplyButton"
-                    android:layout_weight="1"
-                    android:background="@drawable/is_selected_applybutton"
-                    android:text="APPLY"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/sp_16" />
-
-            </LinearLayout>
-
-            <RadioButton
-                android:id="@+id/rb_LowToHigh"
-                style="@style/radioButton"
-                android:layout_below="@+id/ivLine" />
-
-            <RadioButton
-                android:id="@+id/rb_HighToLow"
-                style="@style/radioButton"
-                android:layout_below="@+id/rb_LowToHigh" />
-
-            <RadioButton
-                android:id="@+id/rb_ActiveNow"
-                style="@style/radioButton"
-                android:layout_below="@+id/rb_HighToLow" />
-
-            <RadioButton
-                android:id="@+id/rb_TopExpert"
-                style="@style/radioButton"
-                android:layout_below="@+id/rb_ActiveNow" />
-
-            <RadioButton
-                android:id="@+id/rb_BestMatches"
-                style="@style/radioButton"
-                android:layout_below="@+id/rb_TopExpert" />
-
-        </RelativeLayout>
-
-
-    </androidx.cardview.widget.CardView>
-</layout>
+</androidx.cardview.widget.CardView>

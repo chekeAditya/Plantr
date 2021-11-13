@@ -105,4 +105,8 @@ class HomeFragment : Fragment(R.layout.fragment_home),OnChatClicked{
     override fun onBlogClicked(blog: Blog) {
 
     }
+
+    override fun onClickApply(list: List<Expert>) {
+
+    }
 }
