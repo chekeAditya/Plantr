@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/dp_16"
+    app:cardElevation="@dimen/dp_10"
+    app:cardCornerRadius="@dimen/dp_16">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tvHurray"
+            style="@style/TopHeading"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:text="HURRAY!!"
+            android:textColor="@color/BNWBlack"
+            android:textSize="@dimen/sp_24"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/DoYouWish"
+            style="@style/TopHeading"
+            android:layout_below="@+id/tvHurray"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_16"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:text="Your first FREE expert chat session with Saraswati Ketram has been successfully completed."
+            android:textColor="@color/BNWBlack"
+            android:textSize="@dimen/sp_16"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/DoYouWish"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btnJoinPlans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/rectangle_green_bg"
+                android:text="Join Plans"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_18" />
+
+
+            <Button
+                android:id="@+id/btnRateExpert"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@drawable/rectangle_white"
+                android:text="Rate EXPERT"
+                android:textColor="@color/Green"
+                android:textSize="@dimen/sp_18" />
+
+            <Button
+                android:id="@+id/btnExit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/dp_16"
+                android:layout_marginEnd="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_16"
+                android:background="@android:color/transparent"
+                android:text="Exit"
+                android:layout_marginBottom="@dimen/sp_24"
+                android:textColor="@color/BNWBlack"
+                android:textSize="@dimen/sp_18" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

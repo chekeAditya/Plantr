@@ -22,14 +22,15 @@
         android:layout_marginTop="40dp"/>
 
     <TextView
+        android:textStyle="bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="CHECKOUT"
-        android:fontFamily="@font/poppins"
-        android:textSize="20sp"
-        android:textColor="@color/white"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/poppins"
+        android:text="CHECKOUT"
+        android:textColor="@color/white"
+        android:textSize="20sp" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cvPlanDetailsCheckout"
@@ -50,10 +51,11 @@
             android:id="@+id/tvPlanCheckout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="WEEKLY PLAN"
             android:fontFamily="@font/poppins"
-            android:textColor="@color/main_head_text_green"
-            android:textSize="15sp"/>
+            android:text="WEEKLY PLAN"
+            android:textStyle="bold"
+            android:textColor="@color/BNWBlack"
+            android:textSize="@dimen/sp_18" />
 
         <TextView
             android:id="@+id/tvSubTotalTextCheckout"
@@ -105,22 +107,26 @@
             android:id="@+id/tvTotalTextCheckout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="TOTAL"
-            android:fontFamily="@font/poppins"
-            android:textColor="@color/main_head_text_green"
-            android:textSize="13sp"
+            android:layout_below="@id/vBelowTaxesCheckout"
             android:layout_marginTop="10dp"
-            android:layout_below="@id/vBelowTaxesCheckout"/>
+            android:fontFamily="@font/poppins"
+            android:text="TOTAL"
+            android:textStyle="bold"
+            android:textColor="@color/BNWBlack"
+            android:textSize="@dimen/sp_14" />
 
         <TextView
             android:id="@+id/tvTotalCheckout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="700.26 Rs"
-            android:fontFamily="@font/poppins"
-            android:layout_alignParentEnd="true"
             android:layout_below="@id/vBelowTaxesCheckout"
-            android:layout_marginTop="10dp"/>
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:textStyle="bold"
+            android:textSize="@dimen/sp_14"
+            android:textColor="@color/BNWBlack"
+            android:fontFamily="@font/poppins"
+            android:text="700.26 Rs" />
 
     </RelativeLayout>
 
@@ -130,21 +136,25 @@
         android:id="@+id/tvPayMethodTextCheckout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="PAYMENT METHOD"
-        android:fontFamily="@font/poppins"
-        android:textColor="@color/main_head_text_green"
-        android:textSize="15sp"
         android:layout_below="@+id/cvPlanDetailsCheckout"
-        android:layout_margin="20dp"/>
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/poppins"
+        android:text="PAYMENT METHOD"
+        android:textStyle="bold"
+        android:textColor="@color/main_head_text_green"
+        android:textSize="@dimen/sp_18" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvPayMethodCheckout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginHorizontal="20dp"
-        tools:listitem="@layout/item_pay_method_checkout"
         android:layout_below="@+id/tvPayMethodTextCheckout"
-        android:layout_marginBottom="80dp"/>
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="80dp"
+        tools:listitem="@layout/item_pay_method_checkout" />
 
     <androidx.cardview.widget.CardView
         android:visibility="gone"

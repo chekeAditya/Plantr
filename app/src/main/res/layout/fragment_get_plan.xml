@@ -142,6 +142,7 @@
                 <RelativeLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent">
+<!--                    Add Limited period offer's -->
 
                     <TextView
                         style="@style/TextView_Filter"
