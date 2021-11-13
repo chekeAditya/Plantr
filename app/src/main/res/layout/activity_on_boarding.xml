@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E5E5E5"
+    android:background="#EBF5F5"
     tools:context=".ui.onBoardingScreen.OnBoarding">
 
     <TextView
@@ -57,7 +57,7 @@
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="28dp"
         android:adjustViewBounds="true"
-        android:background="#E5E5E5"
+        android:background="#EBF5F5"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_group_253" />
 

@@ -73,7 +73,7 @@ class Sign_In : Fragment(R.layout.fragment_sign_in) {
                             etNameSignIn.setText("")
                             etEmailSignIn.setText("")
                             etPasswordSignIn.setText("")
-                            var intent = Intent(context, HomeActivity::class.java)
+                            var intent = Intent(context, ready::class.java)
                             startActivity(intent)
                             Toast.makeText(
                                 context,
