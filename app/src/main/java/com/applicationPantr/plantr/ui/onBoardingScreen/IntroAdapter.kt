@@ -5,6 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.applicationPantr.plantr.R
+import kotlinx.android.synthetic.main.item_gallery.view.*
 import kotlinx.android.synthetic.main.slider_container.view.*
 
 class IntroAdapter(private val introSlider: List<IntroSlider>) :

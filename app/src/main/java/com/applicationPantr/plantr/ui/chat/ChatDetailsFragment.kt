@@ -42,6 +42,7 @@ class ChatDetailsFragment : Fragment() {
 
     //    list
     var expertList = mutableListOf<Expert>()
+    var expertListSmall = mutableListOf<Expert>()
     var clientList = mutableListOf<Client>()
 
     //chat
@@ -71,11 +72,15 @@ class ChatDetailsFragment : Fragment() {
             expertList.clear()
             expertList.addAll(it)
             galleryAdapter.notifyDataSetChanged()
+            for (i in 0..3) {
+                expertListSmall.add(expertList[i])
+            }
             moreExpertAdapter.notifyDataSetChanged()
         })
 
-        chatDetailBinding.btnCheckPlans.setOnClickListener{
-            Navigation.findNavController(requireView()).navigate(R.id.action_chatDetailsFragment_to_getPlanFragment)
+        chatDetailBinding.btnCheckPlans.setOnClickListener {
+            Navigation.findNavController(requireView())
+                .navigate(R.id.action_chatDetailsFragment_to_getPlanFragment)
         }
     }
 
@@ -90,19 +95,17 @@ class ChatDetailsFragment : Fragment() {
 
     private fun settingUpMoreExperts() {
         moreExpertBinding = ItemMoreExpertBinding.inflate(layoutInflater)
-        moreExpertAdapter = MoreExpertAdapter(expertList)
-        for (i in 7 until expertList.size-1) {
-            moreExpertBinding.apply {
-                recyclerViewMoreExpert.layoutManager = LinearLayoutManager(context)
-                recyclerViewMoreExpert.adapter = moreExpertAdapter
-            }
+        moreExpertAdapter = MoreExpertAdapter(expertListSmall)
+        moreExpertBinding.apply {
+            recyclerViewMoreExpert.layoutManager = LinearLayoutManager(context)
+            recyclerViewMoreExpert.adapter = moreExpertAdapter
         }
     }
 
     private fun settingUpGallery() {
         galleryBinding = ItemGalleryBinding.inflate(layoutInflater)
         galleryAdapter = GalleryAdapter(expertList)
-        for (i in 0..5) {
+        for (i in 2..5) {
             galleryBinding.apply {
                 recyclerviewGallery.layoutManager = LinearLayoutManager(
                     context, LinearLayoutManager.HORIZONTAL, false

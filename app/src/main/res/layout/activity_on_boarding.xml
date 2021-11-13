@@ -73,4 +73,6 @@
         android:scaleType="centerCrop"
         android:src="@drawable/ic_group_253__1_"
         android:visibility="gone" />
+
+
 </RelativeLayout>

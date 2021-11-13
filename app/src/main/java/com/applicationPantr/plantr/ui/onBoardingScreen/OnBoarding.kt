@@ -3,7 +3,6 @@ package com.applicationPantr.plantr.ui.onBoardingScreen
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ViewGroup
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.ImageView
 import android.widget.LinearLayout
@@ -14,7 +13,6 @@ import androidx.viewpager2.widget.ViewPager2
 import com.applicationPantr.plantr.R
 import com.applicationPantr.plantr.ui.login.LoginActivity
 import kotlinx.android.synthetic.main.activity_on_boarding.*
-import java.util.*
 
 class OnBoarding : AppCompatActivity() {
     private val introAdapter = IntroAdapter(
@@ -22,17 +20,17 @@ class OnBoarding : AppCompatActivity() {
         listOf(
             IntroSlider
                 (
-                R.drawable.ic_swap_with_people,R.drawable.ic_swap,
+                R.drawable.ic_swap_with_people,R.drawable.swap_onboarding,
                 "Share or Exchange your plants with \n others and form a Swap community."
             ),
             IntroSlider
                 (
-                R.drawable.ic_scan_your_plants,R.drawable.ic_scan,
+                R.drawable.ic_scan_your_plants,R.drawable.scan_onboarding,
                 "Scan your Plants with Plant Scanner \n and know all the details about it"
             ),
             IntroSlider
                 (
-                R.drawable.ic_chat_with_experts,R.drawable.ic_chat,
+                R.drawable.ic_chat_with_experts,R.drawable.chatonboarding,
                 "Scan your Plants with Plant Scanner \n and know all the details about it"
             ),
         )
