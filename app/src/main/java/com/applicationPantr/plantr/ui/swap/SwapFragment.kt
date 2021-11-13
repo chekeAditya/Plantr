@@ -48,6 +48,7 @@ class SwapFragment : Fragment(R.layout.fragment_swap) {
         viewModel.getPlantsDataFromApi().observe(viewLifecycleOwner, Observer {
             listOfPlants.clear()
             listOfPlants.addAll(it)
+            listOfPlants.addAll(it)
             fragmentSwapBinding.swapRecyclerView.adapter?.notifyDataSetChanged()
         })
     }
