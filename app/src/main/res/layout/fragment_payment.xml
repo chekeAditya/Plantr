@@ -8,7 +8,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="216dp"
+        android:layout_height="100dp"
         android:background="@drawable/rectangle">
 
         <ImageView
@@ -74,6 +74,7 @@
                 app:inputType="number"
                 app:pinHeight="56dp"
                 app:pinLength="5"
+                app:password="true"
                 app:pinWidth="@dimen/dp_48" />
         </RelativeLayout>
 

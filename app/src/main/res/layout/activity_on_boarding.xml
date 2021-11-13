@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EBF5F5"
+    android:background="@color/white"
     tools:context=".ui.onBoardingScreen.OnBoarding">
 
     <TextView
@@ -57,7 +57,7 @@
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="28dp"
         android:adjustViewBounds="true"
-        android:background="#EBF5F5"
+        android:background="@color/white"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_group_253" />
 
@@ -69,7 +69,7 @@
         android:layout_alignParentBottom="true"
         android:layout_margin="28dp"
         android:adjustViewBounds="true"
-        android:background="#E5E5E5"
+        android:background="@color/white"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_group_253__1_"
         android:visibility="gone" />

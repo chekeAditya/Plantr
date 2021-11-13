@@ -85,7 +85,11 @@
         android:id="@+id/checkoutSelectPaymentFragment"
         android:name="com.applicationPantr.plantr.ui.checkoutFlow.CheckoutSelectPaymentFragment"
         android:label="fragment_checkout_select_payment"
-        tools:layout="@layout/fragment_checkout_select_payment" />
+        tools:layout="@layout/fragment_checkout_select_payment" >
+        <action
+            android:id="@+id/action_checkoutSelectPaymentFragment_to_paymentFragment"
+            app:destination="@id/paymentFragment" />
+    </fragment>
     <fragment
         android:id="@+id/paymentProcessingFragment"
         android:name="com.applicationPantr.plantr.ui.checkoutFlow.PaymentProcessingFragment"
@@ -94,6 +98,15 @@
         <action
             android:id="@+id/action_paymentProcessingFragment_to_homeFragment"
             app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/paymentFragment"
+        android:name="com.applicationPantr.plantr.ui.home.paymentFragment"
+        android:label="fragment_payment"
+        tools:layout="@layout/fragment_payment" >
+        <action
+            android:id="@+id/action_paymentFragment_to_paymentProcessingFragment"
+            app:destination="@id/paymentProcessingFragment" />
     </fragment>
 
 </navigation>

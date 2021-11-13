@@ -164,7 +164,7 @@ class ChatActivity : AppCompatActivity(), Serializable {
     }
 
     private fun startTimer() {
-        val duration = TimeUnit.MINUTES.toMillis(1)
+        val duration = TimeUnit.SECONDS.toMillis(20)
         object : CountDownTimer(duration, 1000) {
             override fun onTick(l: Long) {
                 val sDuration = String.format(

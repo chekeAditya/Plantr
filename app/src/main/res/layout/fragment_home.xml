@@ -317,8 +317,7 @@
                                 android:layout_width="@dimen/dp_54"
                                 android:layout_height="@dimen/dp_54"
                                 android:layout_marginTop="@dimen/dp_16"
-                                android:src="@drawable/sonalumar"
-                                 />
+                                android:src="@drawable/prachi" />
 
                             <TextView
 
@@ -326,7 +325,7 @@
                                 android:layout_height="wrap_content"
                                 android:layout_marginTop="8dp"
                                 android:fontFamily="@font/poppins"
-                                android:text="Sonal Kumar"
+                                android:text="Sumit Singh"
                                 android:textColor="@color/BNWBlack"
                                 android:textSize="@dimen/sp_16" />
 
@@ -424,16 +423,17 @@
 
                 <ImageView
                     android:id="@+id/ivRare"
-                    android:layout_width="102dp"
-                    android:layout_height="130dp"
+                    android:layout_width="182dp"
+                    android:layout_height="136dp"
                     android:layout_alignParentStart="true"
                     android:layout_marginStart="@dimen/dp_16"
+
                     android:layout_marginBottom="@dimen/dp_16"
                     android:src="@drawable/rareplant" />
 
                 <ImageView
                     android:id="@+id/ivEssential"
-                    android:layout_width="102dp"
+                    android:layout_width="182dp"
                     android:layout_height="136dp"
                     android:layout_alignParentEnd="true"
                     android:layout_marginEnd="@dimen/dp_16"
@@ -442,7 +442,7 @@
 
                 <ImageView
                     android:id="@+id/ivFlowering"
-                    android:layout_width="102dp"
+                    android:layout_width="182dp"
                     android:layout_height="136dp"
                     android:layout_below="@id/ivRare"
                     android:layout_alignParentStart="true"
@@ -451,7 +451,7 @@
 
                 <ImageView
                     android:id="@+id/ivTools"
-                    android:layout_width="102dp"
+                    android:layout_width="182dp"
                     android:layout_height="136dp"
                     android:layout_below="@id/ivEssential"
                     android:layout_alignParentEnd="true"

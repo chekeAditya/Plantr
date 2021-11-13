@@ -31,7 +31,7 @@ class SplashScreen : AppCompatActivity() {
             if (gAuth.currentUser != null)
                 startActivity(Intent(this, HomeActivity::class.java))
             else
-                startActivity(Intent(this@SplashScreen,LoginActivity::class.java))
+                startActivity(Intent(this@SplashScreen,OnBoarding::class.java))
             finish()
         }, 10000)
 

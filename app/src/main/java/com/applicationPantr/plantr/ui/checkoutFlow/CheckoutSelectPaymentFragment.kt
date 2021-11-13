@@ -3,6 +3,7 @@ package com.applicationPantr.plantr.ui.checkoutFlow
 import android.os.Bundle
 import android.view.View
 import androidx.fragment.app.Fragment
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.applicationPantr.plantr.R
 import kotlinx.android.synthetic.main.fragment_checkout_select_payment.*
@@ -31,6 +32,11 @@ class CheckoutSelectPaymentFragment
         cvPayMethodVerifyCheckout.setOnClickListener {
 
         }
+
+        verify_button.setOnClickListener {
+            Navigation.findNavController(it).navigate(R.id.action_checkoutSelectPaymentFragment_to_paymentFragment)
+        }
+
 
     }
 

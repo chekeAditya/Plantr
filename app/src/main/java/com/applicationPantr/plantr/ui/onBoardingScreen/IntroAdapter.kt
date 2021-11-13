@@ -13,7 +13,7 @@ class IntroAdapter(private val introSlider: List<IntroSlider>) :
     inner class IntroViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         private val textTittle = view.Heading1
         private val textDesc = view.Heading2
-        private val image=view.ivImage
+        private val image=view.gifImageView_Swap
         fun bind(introSlider: IntroSlider) {
             textTittle.setImageResource(introSlider.HeadingOne)
             textDesc.text = introSlider.HeadingTwo
