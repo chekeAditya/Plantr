@@ -24,7 +24,7 @@
 
     <com.google.android.material.textfield.TextInputLayout
         app:passwordToggleTint="@color/text_secondary"
-        app:passwordToggleEnabled="false"
+        app:passwordToggleEnabled="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:hintTextColor="@color/Green"

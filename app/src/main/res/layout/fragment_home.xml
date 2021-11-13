@@ -95,7 +95,8 @@
                 android:background="@color/primary_2"
                 app:cardCornerRadius="8dp">
 
-                <LinearLayout
+                <RelativeLayout
+                    android:elevation="@dimen/dp_5"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/primary_2"
@@ -103,6 +104,7 @@
 
 
                     <androidx.cardview.widget.CardView
+                        android:id="@+id/cvTemp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/dp_16"
@@ -160,6 +162,8 @@
                     </androidx.cardview.widget.CardView>
 
                     <TextView
+                        android:id="@+id/tvTips"
+                        android:layout_below="@id/cvTemp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/dp_24"
@@ -171,12 +175,25 @@
                         android:textSize="12sp" />
 
                     <ImageView
+                        android:layout_below="@id/tvTips"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="@dimen/dp_16"
                         android:layout_marginBottom="@dimen/dp_26"
                         android:src="@drawable/ic_addplants" />
-                </LinearLayout>
+
+                    <pl.droidsonroids.gif.GifImageView
+                        android:id="@+id/gifImageThumb"
+                        android:layout_width="188dp"
+                        android:layout_height="60dp"
+                        android:layout_below="@id/tvTips"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="-5dp"
+                        android:layout_marginEnd="12dp"
+                        android:src="@drawable/gettoknow"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </RelativeLayout>
             </androidx.cardview.widget.CardView>
 
             <RelativeLayout
@@ -200,7 +217,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/tvExpert"
                     android:layout_marginStart="@dimen/dp_16"
-                    android:layout_marginTop="4dp"
+
                     android:fontFamily="@font/poppins"
                     android:text="India’s best plant expert at your service"
                     android:textColor="@color/white_gray"

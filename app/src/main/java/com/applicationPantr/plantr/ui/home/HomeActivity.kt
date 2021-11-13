@@ -24,6 +24,8 @@ class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         activityHomeBinding = DataBindingUtil.setContentView(this, R.layout.activity_home)
+
+        setContentView(activityHomeBinding.root)
         val navController = findNavController(R.id.navHostFragment)
 
         activityHomeBinding.bottomNavigationView.setupWithNavController(navController)

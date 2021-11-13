@@ -87,8 +87,8 @@
                 android:background="@drawable/rectangulate_button"
                 android:onClick="@{() ->onClickedChat.onClicked(expertsResponse)}"
                 android:text="CHAT"
-                android:textSize="18sp"
-                android:textColor="@color/primary_green" />
+                android:textColor="@color/primary_green"
+                android:textSize="18sp" />
 
         </RelativeLayout>
 
