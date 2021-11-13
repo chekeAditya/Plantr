@@ -1,20 +1,25 @@
 package com.applicationPantr.plantr.ui.login
 
+import android.content.Context
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
+import android.view.View
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import com.applicationPantr.plantr.R
-import com.applicationPantr.plantr.databinding.ActivityMainBinding
-import com.applicationPantr.plantr.databinding.ActivityPermissionBinding
 import com.applicationPantr.plantr.ui.home.HomeActivity
+import com.google.android.gms.auth.api.signin.GoogleSignIn.hasPermissions
+import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.activity_permission.*
-import org.jetbrains.annotations.Contract
-import java.security.Permission
-import java.util.jar.Manifest
+import kotlin.String as String
 
-class Permission : AppCompatActivity() {
+abstract class Permission(private val PERMISSIONS: Array<String>) : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_permission)
@@ -28,7 +33,7 @@ class Permission : AppCompatActivity() {
                     .show()
 
             }
-}
+        }
 
         ivNotNow.setOnClickListener {
             val notificationIntentGoogle = Intent(this, HomeActivity::class.java)
@@ -40,6 +45,7 @@ class Permission : AppCompatActivity() {
             request.launch(android.Manifest.permission.ACCESS_COARSE_LOCATION)
             request.launch(android.Manifest.permission.READ_EXTERNAL_STORAGE)
         }
+
 
     }
 }

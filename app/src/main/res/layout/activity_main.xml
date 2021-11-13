@@ -138,6 +138,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:elevation="@dimen/dp_5"
             android:id="@+id/ivGoogle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -147,6 +148,7 @@
             android:src="@drawable/ic_google" />
 
         <ImageView
+            android:elevation="@dimen/dp_5"
             android:id="@+id/ivFacebook"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -156,6 +158,7 @@
             android:src="@drawable/ic_facebook" />
 
         <ImageView
+            android:elevation="@dimen/dp_5"
             android:id="@+id/ivTwitter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

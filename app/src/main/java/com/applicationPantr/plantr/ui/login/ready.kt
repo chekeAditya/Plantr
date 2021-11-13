@@ -17,7 +17,7 @@ class ready : AppCompatActivity() {
             startActivity(i)
             // close this activity
             finish()
-        },2000)
+        },10000)
 
     }
 }

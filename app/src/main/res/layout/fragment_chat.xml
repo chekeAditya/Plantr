@@ -36,7 +36,6 @@
             <ImageView
                 android:id="@+id/iv_filter"
                 style="@style/ImageViewChatFragment"
-                android:onClick="@{() ->onSortButtonClicked.onFilterClicked(expertResponse)}"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="@dimen/dp_18"
                 android:src="@drawable/ic_filter" />

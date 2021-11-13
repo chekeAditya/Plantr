@@ -4,6 +4,7 @@ import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
+import com.applicationPantr.plantr.remote.response.responseModel.Blog
 import com.applicationPantr.plantr.remote.response.responseModel.Client
 import com.applicationPantr.plantr.remote.response.responseModel.Expert
 import com.applicationPantr.plantr.repositories.Repository
@@ -19,7 +20,11 @@ class ChatViewModel @Inject constructor(var repository: Repository) : ViewModel(
             emit(repository.getResponse())
         }
     }
-
+fun getBlogData():LiveData<List<Blog>>{
+    return  liveData ( Dispatchers.IO ){
+        emit(repository.getBlogResponse())
+    }
+}
 
 //    fun getClientResponseFromAPi():LiveData<List<Client>>{
 //        return liveData(Dispatchers.IO) {

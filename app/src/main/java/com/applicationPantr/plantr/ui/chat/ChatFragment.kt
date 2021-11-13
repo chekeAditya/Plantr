@@ -15,7 +15,9 @@ import com.applicationPantr.plantr.R
 import com.applicationPantr.plantr.adapters.ChatAdapter
 import com.applicationPantr.plantr.databinding.BottomSheetChatFargmentBinding
 import com.applicationPantr.plantr.databinding.FragmentChatBinding
+import com.applicationPantr.plantr.extras.ChatFilterList
 import com.applicationPantr.plantr.remote.interfaces.OnChatClicked
+import com.applicationPantr.plantr.remote.response.responseModel.Blog
 import com.applicationPantr.plantr.remote.response.responseModel.Expert
 import com.applicationPantr.plantr.viewmodels.ChatViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialog
@@ -45,17 +47,26 @@ class ChatFragment : Fragment(), OnChatClicked {
         super.onViewCreated(view, savedInstanceState)
         setUpRecyclerView()
 
-        chatViewModel.getDataFromApi().observe(viewLifecycleOwner, Observer {
+
+        if (ChatFilterList.filter){
             expertList.clear()
-            expertList.addAll(it)
-
+            expertList.addAll(ChatFilterList.filterList)
             chatAdapter.notifyDataSetChanged()
-        })
+        }
+        else {
+            chatViewModel.getDataFromApi().observe(viewLifecycleOwner, Observer {
+                expertList.clear()
+                expertList.addAll(it)
+                chatAdapter.notifyDataSetChanged()
+                ChatFilterList.originalList.clear()
+                ChatFilterList.originalList.addAll(it)
+            })
+        }
 
-//        charFragmentChatBinding.ivFilter.setOnClickListener {
-//            val action1 = ChatFragmentDirections.actionChatFragmentToFilterFragment(expert)
-//            Navigation.findNavController(requireView()).navigate(action1)
-//        }
+        charFragmentChatBinding.ivFilter.setOnClickListener {
+            val navController = Navigation.findNavController(requireView())
+            navController.navigate(R.id.filterFragment)
+        }
 
 
         charFragmentChatBinding.ivSort.setOnClickListener {
@@ -91,9 +102,13 @@ class ChatFragment : Fragment(), OnChatClicked {
         Navigation.findNavController(requireView()).navigate(action)
     }
 
-    override fun onFilterClicked(expert: Expert) {
-        action = ChatFragmentDirections.actionChatFragmentToFilterFragment(expert)
-        Navigation.findNavController(requireView()).navigate(action)
+    override fun onBlogClicked(blog: Blog) {
+        TODO("Not yet implemented")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        ChatFilterList.filter = false
     }
 
 }
