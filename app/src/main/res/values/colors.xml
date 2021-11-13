@@ -41,4 +41,6 @@
     <color name="main_orange_bg">#FFC495</color>
     <color name="main_text_light">#909791</color>
     <color name="light_green">#D4F9DA</color>
+    <color name="BNWBLACK">#39463B</color>
+    <color name="app_bg_color">#EBF5F5</color>
 </resources>

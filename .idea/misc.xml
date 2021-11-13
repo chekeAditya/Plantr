@@ -7,6 +7,7 @@
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/item_right_side_background.xml" value="0.39444444444444443" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/rectangle_green_bg.xml" value="0.403125" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/rectangle_white.xml" value="0.403125" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/rectangle_white_transparent.xml" value="0.39692307692307693" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/thumb.xml" value="0.4119791666666667" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/track.xml" value="0.403125" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/activity_chat.xml" value="0.22" />
@@ -29,7 +30,7 @@
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_get_plan_2.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_home.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_log_in.xml" value="0.38697916666666665" />
-        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_profile.xml" value="0.38697916666666665" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_sign_in.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/fragment_swap.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_alert_box.xml" value="0.38697916666666665" />
