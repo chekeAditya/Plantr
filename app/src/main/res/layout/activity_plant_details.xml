@@ -163,6 +163,7 @@
                     </androidx.constraintlayout.widget.ConstraintLayout>
 
                     <TextView
+                        android:textSize="@dimen/sp_12"
                         android:id="@+id/tvOptionPlantDetails"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"

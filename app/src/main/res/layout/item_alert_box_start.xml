@@ -23,28 +23,28 @@
         <TextView
             android:id="@+id/tvYoucanTry"
             android:layout_width="match_parent"
-            android:textSize="@dimen/sp_12"
-            android:layout_marginEnd="@dimen/dp_24"
             android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_20"
+            android:layout_marginEnd="@dimen/dp_24"
+            android:layout_toEndOf="@+id/ivInfo"
             android:text="You can try out 1 Free chat session with expert of your choice for 3 mins."
             android:textColor="@color/BNWBlack"
-            android:layout_toEndOf="@+id/ivInfo"
-            android:layout_marginTop="@dimen/dp_20"
-            android:layout_marginStart="@dimen/dp_10"/>
+            android:textSize="@dimen/sp_12" />
 
 
         <TextView
             android:id="@+id/DoYouWish"
             style="@style/TopHeading"
             android:layout_below="@+id/tvYoucanTry"
-            android:textSize="@dimen/sp_18"
-            android:textStyle="bold"
-            android:text="Do you wish to begin your FREE session with this Expert?"
-            android:textColor="@color/BNWBlack"
+            android:layout_marginStart="@dimen/dp_10"
+            android:layout_marginTop="@dimen/dp_16"
             android:layout_marginEnd="@dimen/dp_24"
             android:layout_toEndOf="@+id/ivInfo"
-            android:layout_marginTop="@dimen/dp_16"
-            android:layout_marginStart="@dimen/dp_10"/>
+            android:text="Do you wish to begin your FREE session with this Expert?"
+            android:textColor="@color/BNWBlack"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_below="@+id/DoYouWish"

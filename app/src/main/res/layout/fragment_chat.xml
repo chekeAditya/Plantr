@@ -16,7 +16,7 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#DBDEDC"
+        android:background="#EBF5F5"
         tools:context=".ui.chat.ChatFragment">
 
 
