@@ -360,7 +360,7 @@
                                 android:layout_width="@dimen/dp_54"
                                 android:layout_height="@dimen/dp_54"
                                 android:layout_marginTop="@dimen/dp_16"
-                                android:src="@drawable/gopal" />
+                                android:src="@drawable/aditya_bg" />
 
                             <TextView
 

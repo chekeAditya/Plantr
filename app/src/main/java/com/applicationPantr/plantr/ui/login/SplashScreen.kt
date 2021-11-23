@@ -11,6 +11,10 @@ import com.applicationPantr.plantr.ui.onBoardingScreen.OnBoarding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 
 
 class SplashScreen : AppCompatActivity() {
@@ -27,13 +31,14 @@ class SplashScreen : AppCompatActivity() {
         setContentView(R.layout.activity_splash_screen)
 
 
-        Handler().postDelayed({
+        CoroutineScope(Dispatchers.Main).launch {
+            delay(10000)
             if (gAuth.currentUser != null)
-                startActivity(Intent(this, HomeActivity::class.java))
+                startActivity(Intent(this@SplashScreen, HomeActivity::class.java))
             else
-                startActivity(Intent(this@SplashScreen,OnBoarding::class.java))
+                startActivity(Intent(this@SplashScreen, OnBoarding::class.java))
             finish()
-        }, 10000)
+        }
 
     }
     }

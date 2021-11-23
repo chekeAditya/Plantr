@@ -39,9 +39,9 @@ public class permissionRequest extends AppCompatActivity {
     private void RequestMultiplePermission() {
         ActivityCompat.requestPermissions(permissionRequest.this, new String[]
                 {
-                        CAMERA,
-                        ACCESS_COARSE_LOCATION,
-                        READ_EXTERNAL_STORAGE
+                        CAMERA
+//                        ACCESS_COARSE_LOCATION,
+//                        READ_EXTERNAL_STORAGE
                 }, RequestPermissionCode);
 
     }
@@ -52,10 +52,10 @@ public class permissionRequest extends AppCompatActivity {
             case RequestPermissionCode:
                 if (grantResults.length > 0) {
                     boolean CameraPermission = grantResults[0] == PackageManager.PERMISSION_GRANTED;
-                    boolean RecordAudioPermission = grantResults[1] == PackageManager.PERMISSION_GRANTED;
-                    boolean SendSMSPermission = grantResults[2] == PackageManager.PERMISSION_GRANTED;
+//                    boolean RecordAudioPermission = grantResults[1] == PackageManager.PERMISSION_GRANTED;
+//                    boolean SendSMSPermission = grantResults[2] == PackageManager.PERMISSION_GRANTED;
 
-                    if (CameraPermission && RecordAudioPermission && SendSMSPermission) {
+                    if (CameraPermission /*&& RecordAudioPermission && SendSMSPermission*/) {
 
                         Toast.makeText(permissionRequest.this, "Permission Granted", Toast.LENGTH_LONG).show();
                         Intent i=new Intent(permissionRequest.this, HomeActivity.class);
@@ -70,11 +70,11 @@ public class permissionRequest extends AppCompatActivity {
     }
     public boolean CheckingPermissionIsEnabledOrNot() {
         int FirstPermissionResult = ContextCompat.checkSelfPermission(getApplicationContext(), CAMERA);
-        int SecondPermissionResult= ContextCompat.checkSelfPermission(getApplicationContext(), ACCESS_COARSE_LOCATION);
-        int ThirdPermissionResult = ContextCompat.checkSelfPermission(getApplicationContext(), READ_EXTERNAL_STORAGE);
-        return FirstPermissionResult == PackageManager.PERMISSION_GRANTED &&
-                SecondPermissionResult == PackageManager.PERMISSION_GRANTED &&
-                ThirdPermissionResult == PackageManager.PERMISSION_GRANTED ;
+//        int SecondPermissionResult= ContextCompat.checkSelfPermission(getApplicationContext(), ACCESS_COARSE_LOCATION);
+//        int ThirdPermissionResult = ContextCompat.checkSelfPermission(getApplicationContext(), READ_EXTERNAL_STORAGE);
+        return FirstPermissionResult == PackageManager.PERMISSION_GRANTED;
+//                SecondPermissionResult == PackageManager.PERMISSION_GRANTED &&
+//                ThirdPermissionResult == PackageManager.PERMISSION_GRANTED ;
 
     }
 

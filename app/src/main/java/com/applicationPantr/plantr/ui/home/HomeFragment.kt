@@ -88,7 +88,7 @@ class HomeFragment : Fragment(R.layout.fragment_home),OnChatClicked{
             ),
             Testimonials(
                 "Sonu Kumar",
-                R.drawable.gopal,
+                R.drawable.aditya_bg,
                 R.drawable.ic_rating,
                 R.drawable.ic_double_commas,
                 "Scanning feature uis great whenever I like some plants and I don't know the name i just scan it "
