@@ -144,7 +144,3 @@ Open Android Studio. Go to File > New > Project From Version Control. Copy the l
     // Coroutines
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'
-
-
-    //pinview
-    implementation 'com.github.Goodiebag:Pinview:v1.3'
