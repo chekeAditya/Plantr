@@ -37,7 +37,6 @@ class HomeActivity : AppCompatActivity(),Serializable {
                 ActivityCompat.requestPermissions(
                     this,
                     arrayOf(Manifest.permission.CAMERA),
-
                 1)
             }
         }

@@ -5,6 +5,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.os.CountDownTimer
+import android.util.Log
 import android.view.Gravity
 import android.view.LayoutInflater
 import android.view.View
@@ -13,7 +14,7 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.applicationPantr.plantr.R
-import com.applicationPantr.plantr.adapters._ChatAdapter
+import com.applicationPantr.plantr.adapters.ChatAdapters
 import com.applicationPantr.plantr.remote.response.chatresponse.Chat
 import com.applicationPantr.plantr.remote.response.chatresponse.NotificationDataModel
 import com.applicationPantr.plantr.remote.response.chatresponse.PushNotification
@@ -44,9 +45,9 @@ class ChatActivity : AppCompatActivity(), Serializable {
         setContentView(R.layout.activity_chat)
         chatRecyclerView.layoutManager =
             LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
-        var intent = getIntent()
-        var userId = intent.getStringExtra("userId")
-        var userName = intent.getStringExtra("userName")
+        val intent = intent
+        val userId = intent.getStringExtra("userId")
+        val userName = intent.getStringExtra("userName")
 
 
         firebaseUser = FirebaseAuth.getInstance().currentUser
@@ -54,18 +55,14 @@ class ChatActivity : AppCompatActivity(), Serializable {
 
         reference!!.addValueEventListener(object : ValueEventListener {
             override fun onCancelled(error: DatabaseError) {
-                TODO("Not yet implemented")
+                Log.d("Aditya", "onCancelled: ${error.message}")
             }
 
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 val user = snapshot.getValue(User::class.java)
                 tvUserName.text = user!!.userName
-//                if (user.profileImage == "") {
-//                    imgProfile.setImageResource(R.drawable.bg_img)
-//                } else {
-//                    Glide.with(this@ChatActivity).load(user.profileImage).into(imgProfile)
-//                }
+
             }
         })
 
@@ -83,7 +80,6 @@ class ChatActivity : AppCompatActivity(), Serializable {
                     NotificationDataModel(userName!!, message),
                     topic
                 ).also {
-//                    sendNotification(it)
                 }
             }
         }
@@ -102,7 +98,7 @@ class ChatActivity : AppCompatActivity(), Serializable {
 
     }
 
-    fun readMessage(senderId: String, receiverId: String) {
+    private fun readMessage(senderId: String, receiverId: String) {
         val databaseReference: DatabaseReference =
             FirebaseDatabase.getInstance().getReference("Chat")
 
@@ -123,26 +119,12 @@ class ChatActivity : AppCompatActivity(), Serializable {
                     }
                 }
 
-                val chatAdapter = _ChatAdapter(this@ChatActivity, chatList)
+                val chatAdapter = ChatAdapters(this@ChatActivity, chatList)
 
                 chatRecyclerView.adapter = chatAdapter
             }
         })
     }
-
-//    private fun sendNotification(notification: PushNotification) =
-//        CoroutineScope(Dispatchers.IO).launch {
-//            try {
-//                val response = RetrofitInstance.api.postNotification(notification)
-//                if (response.isSuccessful) {
-//                    Log.d("TAG", "Response: ${Gson().toJson(response)}")
-//                } else {
-//                    Log.e("TAG", response.errorBody()!!.string())
-//                }
-//            } catch (e: Exception) {
-//                Log.e("TAG", e.toString())
-//            }
-//        }
 
     private fun showAlertBox() {
         val builder = AlertDialog.Builder(this)

@@ -3,7 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/bottom_nav_item_bg_selector.xml" value="0.240625" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/bottom_nav_selector.xml" value="0.240625" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/ic_chat_with_experts.xml" value="0.27447916666666666" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/ic_home.xml" value="0.240625" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/ic_plantr_logo.xml" value="0.403125" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/ic_profile.xml" value="0.240625" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/ic_scan_bottom_nav.xml" value="0.240625" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/ic_swap_with_people.xml" value="0.27447916666666666" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/item_left_side_background.xml" value="0.39444444444444443" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/drawable/item_right_side_background.xml" value="0.39444444444444443" />
@@ -41,7 +47,10 @@
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_alert_box.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_alert_box_end.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_alert_box_start.xml" value="0.33" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_blog_layout.xml" value="0.3828125" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_client_review.xml" value="0.22447916666666667" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_client_reviews.xml" value="0.38697916666666665" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_client_testimonial.xml" value="0.22447916666666667" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_gallery.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_layout_chat.xml" value="0.33" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_layout_freesession_popup.xml" value="0.3958333333333333" />
@@ -50,8 +59,9 @@
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_pay_method_checkout.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_right.xml" value="0.38697916666666665" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_swap_layout.xml" value="0.38697916666666665" />
-        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_user.xml" value="0.38697916666666665" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/item_user.xml" value="0.18" />
         <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/layout/slider_container.xml" value="0.25" />
+        <entry key="..\:/Android Development/Projects/Plantr/version_0.2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.22447916666666667" />
       </map>
     </option>
   </component>

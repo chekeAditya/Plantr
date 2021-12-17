@@ -14,6 +14,7 @@ import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.ACCESS_COARSE_LOCATION;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
 public class permissionRequest extends AppCompatActivity {
+
     ImageView button;
     public static final int RequestPermissionCode = 7;
     @Override
@@ -27,7 +28,6 @@ public class permissionRequest extends AppCompatActivity {
                 if(CheckingPermissionIsEnabledOrNot())
                 {
                     Toast.makeText(permissionRequest.this, "All Permissions Granted Successfully", Toast.LENGTH_LONG).show();
-
                 }
                 else {
                     RequestMultiplePermission();
@@ -75,7 +75,6 @@ public class permissionRequest extends AppCompatActivity {
         return FirstPermissionResult == PackageManager.PERMISSION_GRANTED &&
                 SecondPermissionResult == PackageManager.PERMISSION_GRANTED &&
                 ThirdPermissionResult == PackageManager.PERMISSION_GRANTED ;
-
     }
 
 }

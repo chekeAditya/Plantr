@@ -2,6 +2,7 @@ package com.applicationPantr.plantr.ui.chat._chat
 
 import android.content.Context
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
@@ -27,8 +28,6 @@ class UserActivity : AppCompatActivity(), Serializable {
         setContentView(R.layout.activity_user)
 
         FirebaseService.sharedPref = getSharedPreferences("sharedPref", Context.MODE_PRIVATE)
-
-
         userRecyclerView.layoutManager =
             GridLayoutManager(this, 2)
 
@@ -36,14 +35,13 @@ class UserActivity : AppCompatActivity(), Serializable {
             onBackPressed()
         }
 
-
         getUsersList()
     }
 
-    fun getUsersList() {
+    private fun getUsersList() {
         val firebase: FirebaseUser = FirebaseAuth.getInstance().currentUser!!
 
-        var userid = firebase.uid
+        val userid = firebase.uid
         FirebaseMessaging.getInstance().subscribeToTopic("/topics/$userid")
 
 
@@ -52,10 +50,6 @@ class UserActivity : AppCompatActivity(), Serializable {
 
 
         databaseReference.addValueEventListener(object : ValueEventListener {
-            override fun onCancelled(error: DatabaseError) {
-                Toast.makeText(applicationContext, error.message, Toast.LENGTH_SHORT).show()
-            }
-
             override fun onDataChange(snapshot: DataSnapshot) {
                 userList.clear()
                 val currentUser = snapshot.getValue(User::class.java)
@@ -67,16 +61,16 @@ class UserActivity : AppCompatActivity(), Serializable {
 
                 for (dataSnapShot: DataSnapshot in snapshot.children) {
                     val user = dataSnapShot.getValue(User::class.java)
-
-                    if (!user!!.userId.equals(firebase.uid)) {
-
+                    if (user!!.userId != firebase.uid) {
                         userList.add(user)
                     }
                 }
 
                 val userAdapter = UserAdapter(this@UserActivity, userList)
-
                 userRecyclerView.adapter = userAdapter
+            }
+            override fun onCancelled(error: DatabaseError) {
+                Log.d("Aditya", "onCancelled: ${error.message}")
             }
 
         })

@@ -8,6 +8,7 @@
         android:layout_height="match_parent"
         tools:context=".ui.chat._chat.ChatActivity">
 
+
         <androidx.cardview.widget.CardView
             android:id="@+id/l1"
             android:layout_width="match_parent"

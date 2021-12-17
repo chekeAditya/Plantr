@@ -12,12 +12,11 @@ import com.applicationPantr.plantr.extras.Constants.MESSAGE_TYPE_RIGHT
 import com.applicationPantr.plantr.remote.response.chatresponse.Chat
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
-import de.hdodenhof.circleimageview.CircleImageView
 
-class _ChatAdapter(
+class ChatAdapters(
     private val context: Context,
     private val chatList: ArrayList<Chat>
-) : RecyclerView.Adapter<_ChatAdapter.ViewHolder>() {
+) : RecyclerView.Adapter<ChatAdapters.ViewHolder>() {
 
 
     var firebaseUser: FirebaseUser? = null
@@ -32,7 +31,6 @@ class _ChatAdapter(
                 LayoutInflater.from(parent.context).inflate(R.layout.item_left, parent, false)
             return ViewHolder(view)
         }
-
     }
 
     override fun getItemCount(): Int {
@@ -42,14 +40,10 @@ class _ChatAdapter(
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val chat = chatList[position]
         holder.txtUserName.text = chat.message
-        //Glide.with(context).load(user.profileImage).placeholder(R.drawable.profile_image).into(holder.imgUser)
-
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-
         val txtUserName: TextView = view.findViewById(R.id.tvMessage)
-//        val imgUser: CircleImageView = view.findViewById(R.id.userImage)
     }
 
     override fun getItemViewType(position: Int): Int {

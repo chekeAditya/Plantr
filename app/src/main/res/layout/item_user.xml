@@ -1,70 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="200dp"
     android:id="@+id/layoutUser"
-    android:layout_margin="@dimen/dp_8"
+    android:layout_width="200dp"
     android:layout_height="wrap_content"
-    app:cardCornerRadius="@dimen/dp_16"
-    android:orientation="vertical"
+    android:layout_margin="@dimen/dp_8"
     android:elevation="@dimen/dp_5"
-    android:paddingTop="10dp">
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    app:cardCornerRadius="@dimen/dp_16">
 
 
-        <RelativeLayout
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="10dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="@color/colorPrimary"
+            app:civ_border_width="1dp" />
+
+
+        <ImageView
+            android:id="@+id/expert_Rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/userImage"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_11"
+            android:src="@drawable/ic_rating" />
+
+        <TextView
+            android:id="@+id/userName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/expert_Rating"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_11"
+            android:fontFamily="@font/poppins_medium"
+            android:text=""
+            android:textColor="@color/BNWBlack"
+            android:textSize="@dimen/sp_16" />
+
+
+        <Button
+            android:id="@+id/btn_chat"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="36dp"
+            android:layout_below="@+id/userName"
+            android:layout_marginStart="@dimen/dp_19"
+            android:layout_marginTop="@dimen/dp_10"
+            android:layout_marginEnd="@dimen/dp_19"
+            android:layout_marginBottom="@dimen/dp_16"
+            android:background="@drawable/rectangulate_button"
+            android:text="CHAT"
+            android:textColor="@color/primary_green"
+            android:textSize="18sp" />
 
-            <de.hdodenhof.circleimageview.CircleImageView
-                android:id="@+id/userImage"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/dp_10"
-                android:layout_marginStart="10dp"
-                android:layout_marginEnd="10dp"
-                android:src="@mipmap/ic_launcher"
-                app:civ_border_color="@color/colorPrimary"
-                app:civ_border_width="1dp" />
-
-
-            <ImageView
-                android:id="@+id/expert_Rating"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/userImage"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/dp_11"
-                android:src="@drawable/ic_rating" />
-
-            <TextView
-                android:id="@+id/userName"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/expert_Rating"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="@dimen/dp_11"
-                android:fontFamily="@font/poppins_medium"
-                android:text=""
-                android:textColor="@color/BNWBlack"
-                android:textSize="@dimen/sp_16" />
-
-
-            <Button
-                android:id="@+id/btn_chat"
-                android:layout_width="match_parent"
-                android:layout_height="36dp"
-                android:layout_below="@+id/userName"
-                android:layout_marginStart="@dimen/dp_19"
-                android:layout_marginTop="@dimen/dp_10"
-                android:layout_marginEnd="@dimen/dp_19"
-                android:layout_marginBottom="@dimen/dp_16"
-                android:background="@drawable/rectangulate_button"
-                android:text="CHAT"
-                android:textColor="@color/primary_green"
-                android:textSize="18sp" />
-
-        </RelativeLayout>
+    </RelativeLayout>
 
 </androidx.cardview.widget.CardView>
